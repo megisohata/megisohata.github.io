@@ -10,8 +10,7 @@ const Home = () => {
                     <div className='text-container'>
                         <h1>Hi, I'm Meg!</h1>
                         <h4>Welcome to my website. 🌙</h4>
-                        <h3>I am a <span className='underline'>student</span> at Cornell University &</h3>
-                        <h3>an aspiring <span className='underline'>software engineer</span>.</h3>
+                        <h3>I am a <span className='underline'>CS Major</span> at Cornell University & an aspiring <span className='underline'>software engineer</span>.</h3>
                         <div className='button-container'>
                             <Link to='about'>
                                 <button>✨ MORE ABOUT ME ✨</button>
@@ -25,36 +24,57 @@ const Home = () => {
             </div>
             <hr />
             <div className='experience'>
-                <h2>Experience</h2>
+                <h2 className='section-title'>Experience</h2>
                 <div className='card-container'>
                     <div className='card'>
-                        <div className='time'>
-                            <p>JAN 2024 - PRESENT</p>
+                        <div className='details'>
+                            <p>JUL 2024 - Present</p>
+                            <p>Ithaca, NY</p>
+                        </div>
+                        <div className='desciption'>
+                            <h5>Cornell Bowers CIS</h5>
+                            <p className='small-details'>JUL 2024 - PRESENT | Ithaca, NY</p>
+                            <p className='role'>CS 1110 Course Consultant</p>
+                            <div>
+                                <ul>
+                                    <li>Facilitate office hours and weekly labs, grade homework and exams, provide online assistance, and attend staff meetings to improve student understanding in Python and program design and development.</li>
+                                    <li>Position offered based on course performance, Python proficiency, and demonstrated passion for computer science.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='card'>
+                        <div className='details'>
+                            <p>JAN 2024 - Present</p>
+                            <p>Ithaca, NY</p>
                         </div>
                         <div className='desciption'>
                             <h5>Women in Computing at Cornell</h5>
+                            <p className='small-details'>JAN 2024 - PRESENT | Ithaca, NY</p>
                             <p className='role'>Corporate Relations Director</p>
-                            <p>Establish and maintain corporate relationships, communicating with recruiters to establish sponsorships and collaborate on events.</p>
+                            <div>
+                                <ul>
+                                    <li>Network with corporate recruiters, establishing and maintaining positive relationships with companies.</li>
+                                    <li>Collaborate with tech companies to organize networking events which promote inclusivity in computing.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className='card'>
-                        <div className='time'>
-                            <p>OCT 2023 - PRESENT</p>
+                        <div className='details'>
+                            <p>OCT 2023 - Present</p>
+                            <p>Ithaca, NY</p>
                         </div>
                         <div className='desciption'>
                             <h5>Cornell University Unmanned Air Systems</h5>
+                            <p className='small-details'>OCT 2023 - PRESENT | Ithaca, NY</p>
                             <p className='role'>Autopilot Software Engineer</p>
-                            <p>Work on a full-stack ground control station application for an autonomous aircraft.</p>
-                        </div>
-                    </div>
-                    <div className='card'>
-                        <div className='time'>
-                            <p>OCT 2023 - PRESENT</p>
-                        </div>
-                        <div className='desciption'>
-                            <h5>Cornell Rapid Prototyping Lab</h5>
-                            <p className='role'>Laboratory Technician</p>
-                            <p>Advise professors, research groups, project teams, and undergraduate students on manufacturing prototype designs using 3D printers and laser cutters.</p>
+                            <div>
+                                <ul>
+                                    <li>Collaboratively develop a full-stack ground control station to operate an aircraft in the SUAS competition.</li>
+                                    <li>Make adjustments to the frontend design of the application to make it more user friendly.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

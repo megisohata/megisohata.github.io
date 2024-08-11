@@ -93,6 +93,7 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.6rem;
 }
 
 h4 {
@@ -118,10 +119,43 @@ p {
 }
 
 button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
   font-size: 1rem;
   color: rgb(var(--dark-purple));
+  border: solid 1px rgb(var(--white));
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: rgba(var(--white), 0.2);
 }
 
 a {
   color: rgb(var(--dark-purple));
+}
+
+hr {
+  background-color: rgb(var(--white));
+  border: none;
+  height: 1px;
+}
+
+ul {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 64rem) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  h1 {
+    font-size: 3rem;
+  }
 }

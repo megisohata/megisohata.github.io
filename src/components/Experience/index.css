@@ -1,0 +1,17 @@
+@import '../experience.css';
+
+.experience {
+    margin: 3rem 6rem;
+}
+
+@media (max-width: 64rem) {
+    .experience {
+        margin: 3rem 4rem;
+    }
+}
+
+@media (max-width: 42rem) {
+    .experience {
+        margin: 3rem 2rem;
+    }
+}
