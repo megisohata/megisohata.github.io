@@ -25,10 +25,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="px-16 py-8 w-screen h-screen bg-amber-100">
+          <main className="flex flex-col gap-8 items-center sm:items-start w-full h-full">
+            <div className="flex items-center justify-between w-full h-16 bg-indigo-100 rounded-lg">
+              <a>Meg Isohata</a>
+              <a>Experience</a>
+              <a>Portfolio</a>
+              <a>About</a>
+            </div>
+            {children}
+          </main>
+          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+            
+          </footer>
+        </div>
       </body>
     </html>
   );
