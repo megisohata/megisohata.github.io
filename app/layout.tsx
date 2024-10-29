@@ -17,12 +17,15 @@ export default function RootLayout({
       <body className="bg-cream">
         <div className="px-16 py-8 w-screen h-screen">
           <main className="flex flex-col gap-8 w-full h-full">
-            <div className="bg-forest text-cream px-4 flex items-center justify-between w-full h-16 rounded-lg">
-              <a href="/" className="text-3xl">🌼🌼🌼</a>
+            <div className="bg-forest text-cream px-4 flex items-center justify-between w-full h-12 rounded-lg shrink-0">
+              <a href="/" className="text-2xl">🌼🌼🌼</a>
               <a href="/experience">✿ Experience ✿</a>
               <a href="/portfolio">✧ Portfolio ✧</a>
               <a href="/about">❀ About ❀</a>
-              <div></div>
+              <div className="flex gap-1">
+                <a href="https://github.com/megisohata" target="_blank"><img src="github.svg" className="h-8 w-8" /></a>
+                <a href="https://www.linkedin.com/in/meg-isohata/" target="_blank"><img src="linkedin.svg" className="h-8 w-8" /></a>
+              </div>
             </div>
             {children}
           </main>

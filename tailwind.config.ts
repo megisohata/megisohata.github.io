@@ -10,7 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         "cream": "#f4f1e5",
-        "forest": "#012627"
+        "pistachio": "#dce2cf",
+        "forest": "#012627",
+        "pink": "#ddacaa"
       },
       fontFamily:{
         dosis: ["Dosis", "Verdana", "sans-serif"],

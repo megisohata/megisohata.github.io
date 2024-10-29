@@ -6,8 +6,13 @@
 
 html {
   font-family: 'Dosis', Verdana, sans-serif;
+  color: #012627;
 }
 
 h1 {
   font-family: 'Jua', Times, serif;
+}
+
+.emphasis {
+  text-decoration: underline wavy #ddacaa 2px;
 }
