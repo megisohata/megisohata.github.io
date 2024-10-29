@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "cream": "#f4f1e5",
+        "forest": "#012627"
       },
+      fontFamily:{
+        dosis: ["Dosis", "Verdana", "sans-serif"],
+        jua: ["Jua", "Times", "serif"]
+      }
     },
   },
   plugins: [],
