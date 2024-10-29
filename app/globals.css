@@ -13,6 +13,20 @@ h1 {
   font-family: 'Jua', Times, serif;
 }
 
-.emphasis {
-  text-decoration: underline wavy #ddacaa 2px;
+.spin {
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+}
+
+.spin:hover {
+  transform: rotate(360deg);
+}
+
+.spinContainer > .spinElement {
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+}
+
+.spinContainer:hover > .spinElement {
+  transform: rotate(360deg);
 }
