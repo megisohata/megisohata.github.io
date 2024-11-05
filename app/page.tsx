@@ -61,7 +61,7 @@ export default function Home() {
       <div className="flex-1 flex flex-col gap-4">
         <div className="flex-1 flex flex-col bg-pistachio rounded-lg p-8 justify-center items-center">
           <h1 className="text-2xl">Experience</h1>
-          <div>
+          <div className="w-full">
             {experiences.map((exp, index) => (
               <div key={index}>
                 <ExperienceItem {...exp} />

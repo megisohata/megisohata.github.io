@@ -34,7 +34,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         ) : (
           <p className="text-base italic">{organization}</p>
         )}
-        <p className="text-base">{location}</p>
+        <p className="text-base italic">{location}</p>
       </div>
       {tasks ? (
         <ul>

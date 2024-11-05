@@ -34,7 +34,6 @@ h1 {
 ul {
   margin: 0 24px;
   list-style-type: "✿";
-
   list-style-position: outside;
 }
 
@@ -47,4 +46,5 @@ hr {
   height: 2px;
   background-color: #012627;
   width: 100%;
+  margin: 8px 0;
 }
