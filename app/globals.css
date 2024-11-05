@@ -32,9 +32,13 @@ h1 {
 }
 
 ul {
-  margin: 0 16px;
-  list-style-type: "✻";
+  margin: 0 24px;
+  list-style-type: "✴";
   list-style-position: outside;
+}
+
+li {
+  padding-left: 4px;
 }
 
 hr {
