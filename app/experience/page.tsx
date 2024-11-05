@@ -1,4 +1,4 @@
-import ExperienceItem from "./experience";
+import ExperienceItem from "../experience-item";
 
 interface ExperienceEntry {
   title: string;

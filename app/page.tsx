@@ -1,3 +1,37 @@
+import ExperienceItem from "./experience-item";
+
+interface ExperienceEntry {
+  title: string;
+  date: string;
+  organization: string;
+  orgLink?: string;
+  location: string;
+}
+
+const experiences: ExperienceEntry[] = [
+  {
+    title: "Autopilot Software Engineer",
+    date: "OCT 2023 - Present",
+    organization: "CUAir",
+    orgLink: "https://cuair.org/",
+    location: "Ithaca, NY",
+  },
+  {
+    title: "Python Course Consultant",
+    date: "JUL 2024 - Present",
+    organization: "Cornell Bowers CIS",
+    orgLink: "https://www.cs.cornell.edu/courses/cs1110/2024fa/",
+    location: "Ithaca, NY",
+  },
+  {
+    title: "Corporate Relations Director",
+    date: "JAN 2024 - Present",
+    organization: "WICC",
+    orgLink: "https://wicc.cornell.edu/",
+    location: "Ithaca, NY",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex gap-8 h-full">
@@ -27,61 +61,13 @@ export default function Home() {
       <div className="flex-1 flex flex-col gap-4">
         <div className="flex-1 flex flex-col bg-pistachio rounded-lg p-8 justify-center items-center">
           <h1 className="text-2xl">Experience</h1>
-          <div className="flex flex-col my-4 w-full">
-            <div className="flex flex-col">
-              <div className="flex justify-between items-center">
-                <h1 className="text-base">Autopilot Software Engineer</h1>
-                <p className="text-base">OCT 2023 - Present</p>
+          <div>
+            {experiences.map((exp, index) => (
+              <div key={index}>
+                <ExperienceItem {...exp} />
+                {index < experiences.length - 1 && <hr />}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://cuair.org/"
-                  target="_blank"
-                  className="bg-cream w-fit py-0.5 px-1 rounded-md text-sm italic"
-                >
-                  🔗 Cornell University Unmanned Air Systems
-                </a>
-                <p className="text-sm">Ithaca, NY</p>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div className="flex flex-col my-4 w-full">
-            <div className="flex flex-col">
-              <div className="flex justify-between items-center">
-                <h1 className="text-base">Python Course Consultant</h1>
-                <p className="text-base">JUL 2024 - Present</p>
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://www.cs.cornell.edu/courses/cs1110/2024fa/"
-                  target="_blank"
-                  className="bg-cream w-fit py-0.5 px-1 rounded-md text-sm italic"
-                >
-                  🔗 Bowers College of Computing and Information Science
-                </a>
-                <p className="text-sm">Ithaca, NY</p>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div className="flex flex-col my-4 w-full">
-            <div className="flex flex-col">
-              <div className="flex justify-between items-center">
-                <h1 className="text-base">Corporate Relations Director</h1>
-                <p className="text-base">JAN 2024 - Present</p>
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://wicc.cornell.edu/"
-                  target="_blank"
-                  className="bg-cream w-fit py-0.5 px-1 rounded-md text-sm italic"
-                >
-                  🔗 Women in Computing at Cornell
-                </a>
-                <p className="text-sm">Ithaca, NY</p>
-              </div>
-            </div>
+            ))}
           </div>
           <a
             href="/experience"

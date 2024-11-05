@@ -4,7 +4,7 @@ interface ExperienceItemProps {
   organization: string;
   orgLink?: string;
   location: string;
-  tasks: string[];
+  tasks?: string[];
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
@@ -16,7 +16,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   tasks,
 }) => {
   return (
-    <div className="flex flex-col my-2">
+    <div className="flex flex-col my-2 w-full">
       <div className="flex justify-between items-center">
         <h1 className="text-base">{title}</h1>
         <p className="text-base">{date}</p>
@@ -36,11 +36,13 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         )}
         <p className="text-base">{location}</p>
       </div>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ul>
+      {tasks ? (
+        <ul>
+          {tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 };
