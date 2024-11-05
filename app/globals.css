@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jua&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  font-family: 'Dosis', Verdana, sans-serif;
+  font-family: "Dosis", Verdana, sans-serif;
   color: #012627;
 }
 
 h1 {
-  font-family: 'Jua', Times, serif;
+  font-family: "Jua", Times, serif;
 }
 
 .spin {
@@ -33,7 +33,8 @@ h1 {
 
 ul {
   margin: 0 24px;
-  list-style-type: "✴";
+  list-style-type: "✿";
+
   list-style-position: outside;
 }
 
