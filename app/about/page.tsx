@@ -1,7 +1,3 @@
 export default function About() {
-    return (
-      <div className="flex gap-8 w-full h-full">
-      </div>
-    );
-  }
-  
+  return <div className="flex gap-8 w-full h-full">About</div>;
+}
