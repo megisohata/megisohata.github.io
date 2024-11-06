@@ -126,8 +126,8 @@ const experiences: ExperienceEntry[] = [
 
 const Experience: React.FC = () => {
   return (
-    <div className="flex flex-col items-center bg-pistachio p-8 rounded-lg w-full">
-      <div className="w-2/3">
+    <div className="flex flex-col gap-8 w-2/3 mx-auto">
+      <div className="bg-pistachio p-8 w-full rounded-lg">
         <h1 className="text-2xl">Education</h1>
         <div className="flex flex-col my-2 w-full">
           <div className="flex justify-between items-center">
@@ -173,7 +173,8 @@ const Experience: React.FC = () => {
             </p>
           </div>
         </div>
-        <hr />
+      </div>
+      <div className="bg-pistachio p-8 w-full rounded-lg">
         <h1 className="text-2xl">Technical Skills</h1>
         <div className="flex gap-2">
           <h1 className="italic">Programming Languages: </h1>
@@ -191,13 +192,17 @@ const Experience: React.FC = () => {
           <h1 className="italic">Other: </h1>
           <p>SolidWorks, Onshape</p>
         </div>
-
-        <hr />
+      </div>
+      <div className="bg-pistachio p-8 w-full rounded-lg">
         <h1 className="text-2xl">Experience</h1>
         {experiences.map((exp, index) => (
-          <ExperienceItem key={index} {...exp} />
+          <div key={index}>
+            <ExperienceItem {...exp} />
+            {index < experiences.length - 1 && <hr />}
+          </div>
         ))}
-        <hr />
+      </div>
+      <div className="bg-pistachio p-8 w-full rounded-lg">
         <h1 className="text-2xl">Awards</h1>
       </div>
     </div>

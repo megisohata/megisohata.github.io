@@ -11,7 +11,7 @@ const projects = [
   },
   {
     title: "Rock Paper Scissors",
-    date: "OCT 2023",
+    date: "OCT 2024",
     description:
       "Rock Paper Scissors game created with HTML, CSS, and JavaScript.",
     imgSrc: "rock-paper-scissors.png",
