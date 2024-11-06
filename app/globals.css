@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jua&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Dosis", Verdana, sans-serif;
+  color: #012627;
+}
+
+h1 {
+  font-family: "Jua", Times, serif;
+}
+
+.spin {
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+}
+
+.spin:hover {
+  transform: rotate(360deg);
+}
+
+.spinContainer > .spinElement {
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+}
+
+.spinContainer:hover > .spinElement {
+  transform: rotate(360deg);
+}
+
+ul {
+  margin: 0 24px;
+  list-style-type: "✿";
+  list-style-position: outside;
+}
+
+li {
+  padding-left: 4px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #012627;
+  width: 100%;
+  margin: 16px 0;
+}
