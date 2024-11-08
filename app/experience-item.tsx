@@ -16,10 +16,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   tasks,
 }) => {
   return (
-    <div className="my-2 w-full">
+    <div className="flex flex-col my-2 w-full">
       <div className="flex justify-between items-center">
         <h1 className="text-base">{title}</h1>
-        <p className="hidden text-base xl:block">{date}</p>
+        <p className="text-base">{date}</p>
       </div>
       <div className="flex justify-between items-center">
         {orgLink ? (
@@ -34,7 +34,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         ) : (
           <p className="text-base italic">{organization}</p>
         )}
-        <p className="hidden text-base italic xl:block">{location}</p>
+        <p className="text-base italic">{location}</p>
       </div>
       {tasks ? (
         <ul>
@@ -43,8 +43,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
           ))}
         </ul>
       ) : null}
-      <p className="text-base xl:hidden">{date}</p>
-      <p className="text-base italic xl:hidden">{location}</p>
     </div>
   );
 };
