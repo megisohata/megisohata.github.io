@@ -34,7 +34,7 @@ const experiences: ExperienceEntry[] = [
 
 export default function Home() {
   return (
-    <div className="flex gap-8 h-full">
+    <div className="flex gap-4 h-full">
       <div className="flex-1 flex flex-col gap-4">
         <h1 className="text-6xl">Meg Isohata</h1>
         <div className="flex-1 flex flex-col bg-pistachio rounded-lg p-8 justify-center items-center">
@@ -83,8 +83,8 @@ export default function Home() {
         <div className="h-40 bg-pistachio border-2 border-forest rounded-lg"></div>
         <div className="flex-1 flex flex-col bg-pistachio rounded-lg p-8 justify-center items-center">
           <h1 className="text-2xl">Portfolio</h1>
-          <div className="flex gap-4 my-4 w-full">
-            <div className="w-40 h-32">
+          <div className="xl:flex gap-4 my-4 w-full">
+            <div className="xl:w-40 xl:h-32">
               <img
                 src="etch-a-sketch.png"
                 className="w-full h-full object-cover"
