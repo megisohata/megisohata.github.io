@@ -10,25 +10,25 @@ html {
 }
 
 h1 {
-  font-family: "Jua", Times, serif;
+  font-family: "Jua", Arial, sans-serif;
 }
 
-.spin {
-  display: inline-block;
-  transition: transform 1s ease-in-out;
-}
-
-.spin:hover {
-  transform: rotate(360deg);
-}
-
+.spin,
 .spinContainer > .spinElement {
-  display: inline-block;
-  transition: transform 1s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 
+.spin:hover,
 .spinContainer:hover > .spinElement {
   transform: rotate(360deg);
+}
+
+.expand {
+  transition: transform 1s ease-in-out;
+}
+
+.expand:hover {
+  transform: scale(1.15);
 }
 
 ul {
