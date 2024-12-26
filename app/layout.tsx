@@ -57,11 +57,11 @@ export default function RootLayout({
         </header>
         <main className="my-4">{children}</main>
         <footer className="bg-forest text-cream w-full px-4 py-4 rounded-lg text-center">
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-2 justify-center">
             <a
               href="https://github.com/megisohata"
               target="_blank"
-              className="flex items-center gap-2"
+              className="flex items-center gap-1"
             >
               <FaGithub className="h-4 w-4 expand" />
               <p>GitHub</p>
@@ -69,13 +69,13 @@ export default function RootLayout({
             <a
               href="https://www.linkedin.com/in/meg-isohata/"
               target="_blank"
-              className="flex items-center gap-2"
+              className="flex items-center gap-1"
             >
               <FaLinkedin className="h-4 w-4 expand" />
               <p>LinkedIn</p>
             </a>
           </div>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-2">
             <a href="/">Home</a>✧<a href="/about">About</a>✧
             <a href="/experience">Experience</a>✧
             <a href="/portfolio">Portfolio</a>
