@@ -1,3 +1,4 @@
+import RandomIconCover from "./templates/random-icon-cover";
 import ExperienceItem from "./templates/experience-item";
 import { experiences } from "./data/experience-data";
 import ProjectItem from "./templates/home-portfolio-item";
@@ -43,6 +44,9 @@ export default function Home() {
             me. <span className="inline-block spinElement">✰</span>
           </a>
         </div>
+      </div>
+      <div className="w-full h-32">
+        <RandomIconCover />
       </div>
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="bg-pistachio flex-1 rounded-lg px-8 py-8 flex flex-col gap-2 items-center">
