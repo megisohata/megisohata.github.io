@@ -61,24 +61,37 @@ export default function RootLayout({
             <a
               href="https://github.com/megisohata"
               target="_blank"
-              className="flex items-center gap-1"
+              className="flex items-center gap-1 expandContainer"
             >
-              <FaGithub className="h-4 w-4 expand" />
+              <FaGithub className="h-4 w-4 expandElement" />
               <p>GitHub</p>
             </a>
+            <p>✧</p>
             <a
               href="https://www.linkedin.com/in/meg-isohata/"
               target="_blank"
-              className="flex items-center gap-1"
+              className="flex items-center gap-1 expandContainer"
             >
-              <FaLinkedin className="h-4 w-4 expand" />
+              <FaLinkedin className="h-4 w-4 expandElement" />
               <p>LinkedIn</p>
             </a>
           </div>
           <div className="flex justify-center gap-2">
-            <a href="/">Home</a>✧<a href="/about">About</a>✧
-            <a href="/experience">Experience</a>✧
-            <a href="/portfolio">Portfolio</a>
+            <a href="/" className="underline decoration-1">
+              Home
+            </a>
+            <p>✿</p>
+            <a href="/about" className="underline decoration-1">
+              About
+            </a>
+            <p>✿</p>
+            <a href="/experience" className="underline decoration-1">
+              Experience
+            </a>
+            <p>✿</p>
+            <a href="/portfolio" className="underline decoration-1">
+              Portfolio
+            </a>
           </div>
           <p>✰ ✰ ✰ ✰</p>
           <div className="flex justify-center items-center gap-1">

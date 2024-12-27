@@ -23,28 +23,21 @@ h1 {
   transform: rotate(360deg);
 }
 
-.expand {
+.expand,
+.expandContainer > .expandElement {
   transition: transform 1s ease-in-out;
 }
 
-.expand:hover {
+.expand:hover,
+.expandContainer:hover > .expandElement {
   transform: scale(1.15);
 }
 
 ul {
-  margin: 0 24px;
+  margin: 0 16px;
   list-style-type: "✿";
-  list-style-position: outside;
 }
 
 li {
   padding-left: 4px;
-}
-
-hr {
-  border: none;
-  height: 2px;
-  background-color: #012627;
-  width: 100%;
-  margin: 16px 0;
 }

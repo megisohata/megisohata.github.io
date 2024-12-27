@@ -1,3 +1,14 @@
+import ExperienceItem from "./templates/experience-item";
+import { experiences } from "./data/experience-data";
+
+export const specificExperiences = experiences.filter((exp) =>
+  [
+    "Autopilot Software Engineer",
+    "Python Course Consultant",
+    "Vice President of Corporate Relations",
+  ].includes(exp.title)
+);
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-4">
@@ -24,6 +35,38 @@ export default function Home() {
           >
             <span className="inline-block spinElement">✰</span> Read more about
             me. <span className="inline-block spinElement">✰</span>
+          </a>
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="bg-pistachio flex-1 rounded-lg px-8 py-8 flex flex-col gap-2 items-center">
+          <h1 className="text-2xl">Experience</h1>
+          <div className="my-8 w-full sm:w-3/4 lg:w-full">
+            {specificExperiences.map((exp, index) => (
+              <div key={index}>
+                <ExperienceItem {...exp} />
+                {index < specificExperiences.length - 1 && (
+                  <hr className="bg-forest w-3/4 h-0.5 mx-auto my-2" />
+                )}
+              </div>
+            ))}
+          </div>
+          <a
+            href="/experience"
+            className="w-fit px-2 py-2 rounded-md border-2 border-forest spinContainer"
+          >
+            <span className="inline-block spinElement">✰</span> View full
+            experience. <span className="inline-block spinElement">✰</span>
+          </a>
+        </div>
+        <div className="bg-pistachio flex-1 rounded-lg px-8 py-8 flex flex-col gap-2 items-center">
+          <h1 className="text-2xl">Portfolio</h1>
+          <a
+            href="/portfolio"
+            className="w-fit px-2 py-2 rounded-md border-2 border-forest spinContainer"
+          >
+            <span className="inline-block spinElement">✰</span> View all
+            projects. <span className="inline-block spinElement">✰</span>
           </a>
         </div>
       </div>

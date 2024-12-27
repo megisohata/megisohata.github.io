@@ -17,9 +17,6 @@ const config: Config = {
         dosis: ["Dosis", "Verdana", "sans-serif"],
         jua: ["Jua", "Times", "serif"],
       },
-      animation: {
-        "spin-slow": "spin 3s linear infinite",
-      },
     },
   },
   plugins: [],
