@@ -4,7 +4,7 @@ import { experiences } from "./data/experience-data";
 import ProjectItem from "./templates/home-portfolio-item";
 import { projects } from "./data/portfolio-data";
 
-export const specificExperiences = experiences.filter((exp) =>
+const specificExperiences = experiences.filter((exp) =>
   [
     "Autopilot Software Engineer",
     "Python Course Consultant",
@@ -12,7 +12,7 @@ export const specificExperiences = experiences.filter((exp) =>
   ].includes(exp.title)
 );
 
-export const specificProjects = projects.filter((pro) =>
+const specificProjects = projects.filter((pro) =>
   [
     "LMCC Alumni Portal",
     "Etch-a-Sketch",
