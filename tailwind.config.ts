@@ -17,6 +17,9 @@ const config: Config = {
         dosis: ["Dosis", "Verdana", "sans-serif"],
         jua: ["Jua", "Times", "serif"],
       },
+      screens: {
+        phone: "640px",
+      },
     },
   },
   plugins: [],

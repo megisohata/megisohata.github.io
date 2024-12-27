@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const iconList = [
   "clover.png",
@@ -13,6 +13,7 @@ const iconList = [
 ];
 
 const PatternIconCover: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [icons, setIcons] = useState<
     { icon: string; left: string; top: string }[]
   >([]);
@@ -37,9 +38,15 @@ const PatternIconCover: React.FC = () => {
     };
 
     const handleResize = () => {
-      const rows = Math.ceil(window.innerHeight / 200);
-      const cols = Math.ceil(window.innerWidth / 200);
-      setIcons(generatePattern(rows, cols));
+      if (containerRef.current) {
+        const containerHeight = containerRef.current.offsetHeight;
+        const containerWidth = containerRef.current.offsetWidth;
+        const rows = Math.ceil(containerHeight / 100);
+        const cols = Math.ceil(containerWidth / 250);
+        console.log(containerHeight);
+        console.log(containerWidth);
+        setIcons(generatePattern(rows, cols));
+      }
     };
 
     handleResize();
@@ -49,7 +56,7 @@ const PatternIconCover: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       {icons.map((icon, index) => (
         <img
           key={index}
