@@ -13,7 +13,11 @@ export const specificExperiences = experiences.filter((exp) =>
 );
 
 export const specificProjects = projects.filter((pro) =>
-  ["Etch-a-Sketch", "Rock Paper Scissors"].includes(pro.title)
+  [
+    "LMCC Alumni Portal",
+    "Etch-a-Sketch",
+    "Interactive Image Selector",
+  ].includes(pro.title)
 );
 
 export default function Home() {
@@ -45,7 +49,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="w-full h-32">
+      <div className="w-full h-12">
         <RandomIconCover />
       </div>
       <div className="flex flex-col lg:flex-row gap-4">

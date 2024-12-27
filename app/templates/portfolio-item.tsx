@@ -39,7 +39,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             className="bg-cream w-fit px-1 py-1 rounded-md flex items-center gap-1 italic expandContainer"
           >
             <img src="clover.png" className="w-4 h-4 expandElement" />
-            <p className="underline decoration-1">Live Demo</p>
+            <p className="underline decoration-1">Demo</p>
           </a>
         )}
         {githubLink && (

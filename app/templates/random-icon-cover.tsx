@@ -41,10 +41,8 @@ const PatternIconCover: React.FC = () => {
       if (containerRef.current) {
         const containerHeight = containerRef.current.offsetHeight;
         const containerWidth = containerRef.current.offsetWidth;
-        const rows = Math.ceil(containerHeight / 100);
+        const rows = Math.ceil(containerHeight / 200);
         const cols = Math.ceil(containerWidth / 250);
-        console.log(containerHeight);
-        console.log(containerWidth);
         setIcons(generatePattern(rows, cols));
       }
     };
@@ -62,7 +60,7 @@ const PatternIconCover: React.FC = () => {
           key={index}
           src={icon.icon}
           alt={`icon-${index}`}
-          className="absolute h-12 spin"
+          className="absolute h-10 spin"
           style={{
             left: icon.left,
             top: icon.top,
