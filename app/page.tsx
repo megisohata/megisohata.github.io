@@ -1,5 +1,7 @@
 import ExperienceItem from "./templates/experience-item";
 import { experiences } from "./data/experience-data";
+import ProjectItem from "./templates/home-portfolio-item";
+import { projects } from "./data/portfolio-data";
 
 export const specificExperiences = experiences.filter((exp) =>
   [
@@ -7,6 +9,10 @@ export const specificExperiences = experiences.filter((exp) =>
     "Python Course Consultant",
     "Vice President of Corporate Relations",
   ].includes(exp.title)
+);
+
+export const specificProjects = projects.filter((pro) =>
+  ["Etch-a-Sketch", "Rock Paper Scissors"].includes(pro.title)
 );
 
 export default function Home() {
@@ -46,7 +52,7 @@ export default function Home() {
               <div key={index}>
                 <ExperienceItem {...exp} />
                 {index < specificExperiences.length - 1 && (
-                  <hr className="bg-forest w-3/4 h-0.5 mx-auto my-2" />
+                  <hr className="bg-forest w-3/4 h-px mx-auto my-4 border-none" />
                 )}
               </div>
             ))}
@@ -61,6 +67,16 @@ export default function Home() {
         </div>
         <div className="bg-pistachio flex-1 rounded-lg px-8 py-8 flex flex-col gap-2 items-center">
           <h1 className="text-2xl">Portfolio</h1>
+          <div className="my-8 w-full sm:w-3/4 lg:w-full">
+            {specificProjects.map((pro, index) => (
+              <div key={index}>
+                <ProjectItem {...pro} />
+                {index < specificProjects.length - 1 && (
+                  <hr className="bg-forest w-3/4 h-px mx-auto my-4 border-none" />
+                )}
+              </div>
+            ))}
+          </div>
           <a
             href="/portfolio"
             className="w-fit px-2 py-2 rounded-md border-2 border-forest spinContainer"

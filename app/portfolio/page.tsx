@@ -1,31 +1,15 @@
-import ProjectCard from "./portfolio-item";
-
-const projects = [
-  {
-    title: "Etch-a-Sketch",
-    date: "OCT 2024",
-    description: "Etch A Sketch created with HTML, CSS, and JavaScript.",
-    imgSrc: "etch-a-sketch.png",
-    liveDemoLink: "https://megisohata.github.io/etch-a-sketch/",
-    githubLink: "https://github.com/megisohata/etch-a-sketch",
-  },
-  {
-    title: "Rock Paper Scissors",
-    date: "OCT 2024",
-    description:
-      "Rock Paper Scissors game created with HTML, CSS, and JavaScript.",
-    imgSrc: "rock-paper-scissors.png",
-    liveDemoLink: "https://megisohata.github.io/rock-paper-scissors/",
-    githubLink: "https://github.com/megisohata/rock-paper-scissors",
-  },
-];
+import ProjectItem from "../templates/portfolio-item";
+import { projects } from "../data/portfolio-data";
 
 const Portfolio: React.FC = () => {
   return (
-    <div className="columns-3 gap-8 w-full">
+    <div className="columns-1 md:columns-2 lg:columns-3 gap-8 w-full">
       {projects.map((project, index) => (
-        <div key={index} className="mb-8 break-inside-avoid">
-          <ProjectCard {...project} />
+        <div
+          key={index}
+          className="bg-pistachio p-8 rounded-lg h-fit mb-8 break-inside-avoid"
+        >
+          <ProjectItem {...project} />
         </div>
       ))}
     </div>
