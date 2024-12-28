@@ -7,7 +7,7 @@ const Portfolio: React.FC = () => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-pistachio p-8 rounded-lg h-fit mb-8 break-inside-avoid"
+          className="bg-pistachio px-8 py-8 rounded-lg h-fit mb-8 break-inside-avoid"
         >
           <ProjectItem {...project} />
         </div>

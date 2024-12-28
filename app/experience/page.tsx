@@ -5,7 +5,7 @@ import { experiences } from "../data/experience-data";
 const Experience: React.FC = () => {
   return (
     <div className="flex gap-4">
-      <div className="sm:w-1/8 lg:w-1/6 xl:w-1/4 shrink-0">
+      <div className="hidden sm:inline-block sm:w-1/8 lg:w-1/6 xl:w-1/4 shrink-0">
         <RandomIconCover />
       </div>
       <div className="flex flex-col gap-4 sm:w-3/4 lg:w-2/3 xl:w-1/2 grow">
@@ -123,7 +123,7 @@ const Experience: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="sm:w-1/8 lg:w-1/6 xl:w-1/4 shrink-0">
+      <div className="hidden sm:inline-block sm:w-1/8 lg:w-1/6 xl:w-1/4 shrink-0">
         <RandomIconCover />
       </div>
     </div>
