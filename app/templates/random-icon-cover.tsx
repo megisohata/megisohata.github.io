@@ -47,10 +47,28 @@ const PatternIconCover: React.FC = () => {
       }
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    const sm = window.matchMedia("(max-width: 640px)");
+    const md = window.matchMedia("(max-width: 768px)");
+    const lg = window.matchMedia("(max-width: 1024px)");
+    const xl = window.matchMedia("(max-width: 1280px)");
 
-    return () => window.removeEventListener("resize", handleResize);
+    const handleMediaQueryChange = () => {
+      handleResize();
+    };
+
+    sm.addEventListener("change", handleMediaQueryChange);
+    md.addEventListener("change", handleMediaQueryChange);
+    lg.addEventListener("change", handleMediaQueryChange);
+    xl.addEventListener("change", handleMediaQueryChange);
+
+    handleResize();
+
+    return () => {
+      sm.removeEventListener("change", handleMediaQueryChange);
+      md.removeEventListener("change", handleMediaQueryChange);
+      lg.removeEventListener("change", handleMediaQueryChange);
+      xl.removeEventListener("change", handleMediaQueryChange);
+    };
   }, []);
 
   return (
