@@ -3,13 +3,13 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const iconList = [
-  "clover.png",
-  "fern.png",
-  "flower.png",
-  "plant.png",
-  "sapling.png",
-  "sparkle.png",
-  "tulip.png",
+  "icons/clover.png",
+  "icons/fern.png",
+  "icons/flower.png",
+  "icons/plant.png",
+  "icons/sapling.png",
+  "icons/sparkle.png",
+  "icons/tulip.png",
 ];
 
 const PatternIconCover: React.FC = () => {

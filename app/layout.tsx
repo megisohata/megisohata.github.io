@@ -19,13 +19,13 @@ export default function RootLayout({
           <div>
             <a href="/" className="flex items-center">
               <span className="w-8 h-8 spin">
-                <img src="flower.png" />
+                <img src="icons/flower.png" />
               </span>
               <span className="w-8 h-8 hidden sm:block spin">
-                <img src="flower.png" />
+                <img src="icons/flower.png" />
               </span>
               <span className="w-8 h-8 hidden sm:block spin">
-                <img src="flower.png" />
+                <img src="icons/flower.png" />
               </span>
             </a>
           </div>
@@ -96,8 +96,8 @@ export default function RootLayout({
           <p>✰ ✰ ✰ ✰</p>
           <div className="flex justify-center items-center gap-1">
             <p>© 2025 Meg Isohata</p>
-            <img src="sapling.png" className="h-4 w-4" />
-            <img src="sparkle.png" className="h-4 w-4" />
+            <img src="icons/sapling.png" className="h-4 w-4" />
+            <img src="icons/sparkle.png" className="h-4 w-4" />
           </div>
         </footer>
       </body>

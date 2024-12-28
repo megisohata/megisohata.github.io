@@ -14,7 +14,7 @@ export const projects = [
     date: "DEC 2024",
     description:
       "Ground control station flight simulator programmed in OCaml using the Bogue GUI library.",
-    imgSrc: "gcs.jpg",
+    imgSrc: "portfolio/gcs.jpg",
     demoLink: "https://www.youtube.com/watch?v=pwyNBIwGpJg&ab_channel=cynyus",
     githubLink:
       "https://github.com/The-Altitude-Attitude/ground-control-station",
@@ -25,7 +25,7 @@ export const projects = [
     date: "NOV 2024",
     description:
       "Full-stack alumni portal for the Lower Manhattan Cultural Council, a Manhattan-based organization supporting emerging artists. Built a responsive frontend using Next.js and Tailwind CSS, a Node.js backend, and a Firebase database. The portal featured a social media feed, job board, events directory, and sign up / log in page.",
-    imgSrc: "lmcc.jpg",
+    imgSrc: "portfolio/lmcc.jpg",
     demoLink: "",
     githubLink: "",
     authors: [
@@ -42,7 +42,7 @@ export const projects = [
     title: "Etch-a-Sketch",
     date: "OCT 2024",
     description: "Etch A Sketch created with HTML, CSS, and JavaScript.",
-    imgSrc: "etch-a-sketch.png",
+    imgSrc: "portfolio/etch-a-sketch.png",
     demoLink: "https://megisohata.github.io/etch-a-sketch/",
     githubLink: "https://github.com/megisohata/etch-a-sketch",
     authors: ["Meg Isohata"],
@@ -52,7 +52,7 @@ export const projects = [
     date: "OCT 2024",
     description:
       "Rock Paper Scissors game created with HTML, CSS, and JavaScript.",
-    imgSrc: "rock-paper-scissors.png",
+    imgSrc: "portfolio/rock-paper-scissors.png",
     demoLink: "https://megisohata.github.io/rock-paper-scissors/",
     githubLink: "https://github.com/megisohata/rock-paper-scissors",
     authors: ["Meg Isohata"],
@@ -62,7 +62,7 @@ export const projects = [
     date: "MAY 2024",
     description:
       "Image selection application using Java’s Swing framework, leveraging Dijkstra’s algorithm with custom weights to identify and select edges in images, providing functionality similar to Photoshop’s Magic Wand tool.",
-    imgSrc: "image-selector.jpg",
+    imgSrc: "portfolio/image-selector.jpg",
     demoLink: "",
     githubLink: "",
     authors: ["Meg Isohata"],
@@ -72,7 +72,7 @@ export const projects = [
     date: "DEC 2023",
     description:
       "Space Invaders clone using GUIs and Object-Oriented Programming in Python, implementing multiple levels, game animations, collisions, and win and lose conditions.",
-    imgSrc: "invaders.jpg",
+    imgSrc: "portfolio/invaders.jpg",
     demoLink: "",
     githubLink: "",
     authors: ["Meg Isohata", "Kaitlyn Roach"],

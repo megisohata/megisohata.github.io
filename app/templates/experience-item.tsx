@@ -26,12 +26,12 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
               target="_blank"
               className="bg-cream w-fit px-1 py-1 rounded-md flex items-center gap-1 expandContainer"
             >
-              <img src="clover.png" className="w-4 h-4 expandElement" />
+              <img src="icons/clover.png" className="w-4 h-4 expandElement" />
               <p className="underline decoration-1">{organization}</p>
             </a>
           ) : (
             <div className="bg-cream w-fit px-1 py-1 rounded-md flex items-center gap-1">
-              <img src="clover.png" className="w-4 h-4" />
+              <img src="icons/clover.png" className="w-4 h-4" />
               <p>{organization}</p>
             </div>
           )}

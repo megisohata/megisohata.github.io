@@ -9,7 +9,7 @@ export default function About() {
       <div className="flex flex-col items-center gap-4 sm:w-3/4 lg:w-2/3 xl:w-1/2 grow">
         <div className="bg-pistachio px-8 py-8 rounded-lg flex flex-col items-center gap-2 w-full">
           <img
-            src="profile.jpg"
+            src="about/profile.jpg"
             className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full border-2 border-forest"
           />
           <h1 className="text-4xl">Hey, I'm Meg!</h1>
@@ -42,10 +42,10 @@ export default function About() {
           <RandomIconCover />
         </div>
         <div className="bg-pistachio px-8 py-8 rounded-lg columns-2 md:columns-4 gap-2">
-          <img src="onion.jpg" className="rounded-md mb-2 md:mb-0" />
-          <img src="temple.jpg" className="rounded-md" />
-          <img src="parfait.jpg" className="rounded-md mb-2 md:mb-0" />
-          <img src="yonsei.jpg" className="rounded-md" />
+          <img src="about/onion.jpg" className="rounded-md mb-2 md:mb-0" />
+          <img src="about/temple.jpg" className="rounded-md" />
+          <img src="about/parfait.jpg" className="rounded-md mb-2 md:mb-0" />
+          <img src="about/yonsei.jpg" className="rounded-md" />
         </div>
       </div>
       <div className="hidden sm:inline-block sm:w-1/8 lg:w-1/6 xl:w-1/4 shrink-0">
