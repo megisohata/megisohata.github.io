@@ -9,13 +9,14 @@ const specificExperiences = experiences.filter((exp) =>
     "Autopilot Software Engineer",
     "Python Course Consultant",
     "Vice President of Corporate Relations",
+    "ASCEND Intern",
   ].includes(exp.title)
 );
 
 const specificProjects = projects.filter((pro) =>
   [
     "LMCC Alumni Portal",
-    "Etch-a-Sketch",
+    "Etch-A-Sketch",
     "Interactive Image Selector",
   ].includes(pro.title)
 );
