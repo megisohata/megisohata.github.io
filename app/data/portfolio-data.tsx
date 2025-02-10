@@ -13,11 +13,10 @@ export const projects: PortfolioEntry[] = [
   {
     title: "K&I Lawyers Website",
     date: "JAN 2025",
-    description: "",
+    description:
+      "The K&I Lawyers website was updated with a modern, clean design and improved functionality to enhance user experience and better represent the firm. The site includes multiple pages outlining key services, along with a contact form that allows visitors to send inquiries directly to K&I Lawyers. I redesigned and developed the website, focusing on intuitive navigation, accessibility, and a polished aesthetic. The project involved refining the layout, optimizing performance, and ensuring a seamless experience across all devices.",
     imgSrc: "portfolio/kandi-lawyers.png",
     demoLink: "https://kandilawyers.com/",
-    githubLink:
-      "The K&I Lawyers website was updated with a modern, clean design and improved functionality to enhance user experience and better represent the firm. The site includes multiple pages outlining key services, along with a contact form that allows visitors to send inquiries directly to K&I Lawyers. I redesigned and developed the website, focusing on intuitive navigation, accessibility, and a polished aesthetic. The project involved refining the layout, optimizing performance, and ensuring a seamless experience across all devices.",
     skills: [
       "HTML/CSS",
       "JavaScript",
