@@ -14,7 +14,7 @@ export default function About() {
           />
           <h1 className="text-4xl">Hey, I'm Meg!</h1>
           <p>
-            I am a sophomore at Cornell University majoring in Computer Science
+            I am a student at Cornell University majoring in Computer Science
             and minoring in Artificial Intelligence. I first discovered my
             passion for Computer Science at the age of 10 when I tried Hour of
             Code. From there, I delved deeper into my interest, starting with

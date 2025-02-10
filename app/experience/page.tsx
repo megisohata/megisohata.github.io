@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
                 </div>
               </div>
               <div className="text-left xl:text-right">
-                <p>May 2027</p>
+                <p></p>
                 <p className="italic">Ithaca, NY</p>
               </div>
             </div>

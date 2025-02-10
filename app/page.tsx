@@ -33,8 +33,8 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl">Hey, I'm Meg!</h1>
             <p>
-              I am a sophomore at Cornell University majoring in Computer
-              Science and minoring in Artificial Intelligence.
+              I am a student at Cornell University majoring in Computer Science
+              and minoring in Artificial Intelligence.
             </p>
             <div className="bg-cream w-fit px-2 py-2 rounded-md flex gap-1 items-center">
               <img src="icons/fern.png" className="w-4 h-4" />
