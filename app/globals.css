@@ -41,3 +41,20 @@ ul {
 li {
   padding-left: 4px;
 }
+
+@keyframes drift-across {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.animate-drift-slow {
+  animation: drift-across 64s linear infinite;
+}
+
+.animate-drift-fast {
+  animation: drift-across 42s linear infinite;
+}

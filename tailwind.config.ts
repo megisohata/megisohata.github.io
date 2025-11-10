@@ -13,7 +13,7 @@ const config: Config = {
         brown: "#473b2f",
         pistachio: "#dce2cf",
         forest: "#012627",
-        red: "#000000"
+        skyBlue: "#cce7f5"
       },
       fontFamily: {
         dosis: ["Dosis", "Verdana", "sans-serif"],
