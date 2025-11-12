@@ -75,6 +75,11 @@ export default function Hero() {
             </defs>
           </svg>
         </div>
+
+        <img
+          src="hero/hanging-plant.svg"
+          className="absolute top-0 left-1/2 translate-x-[125px] w-[225px]"
+        />
       </div>
 
       <div
