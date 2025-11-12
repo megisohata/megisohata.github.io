@@ -1,4 +1,5 @@
 import "../globals.css";
+import About from "./About";
 
 export default function Hero() {
   return (
@@ -77,7 +78,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="h-[500px] w-full relative overflow-visible"
+        className="h-[475px] w-full relative overflow-visible flex flex-col justify-center"
         style={{
           backgroundImage: "url('/hero/wood-grain.svg')",
           backgroundRepeat: "repeat",
@@ -88,6 +89,8 @@ export default function Hero() {
           src="/hero/laptop.svg"
           className="w-[400px] absolute left-1/2 -translate-x-1/2 top-0 -mt-[200px] z-20"
         />
+
+        <About />
       </div>
     </div>
   );

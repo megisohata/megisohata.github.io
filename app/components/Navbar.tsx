@@ -13,7 +13,7 @@ export default function Navbar() {
         </a>
       </div>
       <div className="flex w-full justify-around">
-        <a href="/about" className="spinContainer">
+        <a href="#about" className="spinContainer">
           <span className="hidden sm:inline-block spinElement">✰</span> About{" "}
           <span className="hidden sm:inline-block spinElement">✰</span>
         </a>
