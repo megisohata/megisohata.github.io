@@ -3,8 +3,11 @@ import "../globals.css";
 export default function Hero() {
   return (
     <div>
-      <div className="h-[55vh] w-full bg-cream flex">
-        <div className="relative bg-gradient-to-t from-cream via-skyBlue/100 to-skyBlue mx-auto my-auto w-[250px] h-[325px] border-[6px] border-brown rounded-t-full overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.2)]">
+      <div className="h-[500px] w-full bg-cream flex">
+        <div className="relative bg-gradient-to-t from-cream via-skyBlue/100 to-skyBlue mx-auto mt-[75px] w-[250px] h-[325px] border-[6px] border-brown rounded-t-full overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.2)]">
+          <div className="absolute left-1/2 top-0 h-full w-[6px] bg-brown z-10" />
+          <div className="absolute left-0 top-[125px] w-full h-[6px] bg-brown z-10" />
+
           <svg
             className="absolute top-12 opacity-75 animate-drift-slow"
             width="125"
@@ -37,7 +40,6 @@ export default function Hero() {
               </filter>
             </defs>
           </svg>
-
           <svg
             className="absolute top-28 opacity-70 animate-drift-fast"
             width="180"
@@ -74,7 +76,19 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="h-[25vh] w-full bg-brown"></div>
+      <div
+        className="h-[500px] w-full relative overflow-visible"
+        style={{
+          backgroundImage: "url('/hero/wood-grain.svg')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "auto",
+        }}
+      >
+        <img
+          src="/hero/laptop.svg"
+          className="w-[400px] absolute left-1/2 -translate-x-1/2 top-0 -mt-[200px] z-20"
+        />
+      </div>
     </div>
   );
 }

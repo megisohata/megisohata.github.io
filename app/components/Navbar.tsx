@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="bg-brown text-cream h-12 w-full px-4 flex justify-between items-center fixed top-0">
+    <nav className="bg-brown text-cream h-12 w-full px-4 flex justify-between items-center fixed top-0 z-[100]">
       <div>
         <a href="/" className="flex items-center">
           <span className="w-8 h-8 spin">

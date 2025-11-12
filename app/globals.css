@@ -47,7 +47,7 @@ li {
     transform: translateX(-200px);
   }
   to {
-    transform: translateX(200px);
+    transform: translateX(250px);
   }
 }
 

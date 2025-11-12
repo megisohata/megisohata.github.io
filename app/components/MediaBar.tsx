@@ -9,7 +9,7 @@ export default function MediaBar() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const bgAudio = new Audio("/Amberlight.mp3");
+    const bgAudio = new Audio("/amberlight.mp3");
     bgAudio.loop = true;
     bgAudio.volume = volume;
     audioRef.current = bgAudio;
