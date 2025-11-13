@@ -6,9 +6,6 @@ export default function Hero() {
     <div>
       <div className="h-[500px] w-full bg-cream flex">
         <div className="relative bg-gradient-to-t from-cream via-skyBlue/100 to-skyBlue mx-auto mt-[75px] w-[250px] h-[325px] border-[6px] border-brown rounded-t-full overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.2)]">
-          <div className="absolute left-1/2 top-0 h-full w-[6px] bg-brown z-10" />
-          <div className="absolute left-0 top-[125px] w-full h-[6px] bg-brown z-10" />
-
           <svg
             className="absolute top-12 opacity-75 animate-drift-slow"
             width="125"
@@ -74,11 +71,28 @@ export default function Hero() {
               </filter>
             </defs>
           </svg>
+          <div className="absolute left-1/2 top-0 h-full w-[6px] bg-brown" />
+          <div className="absolute left-0 top-[125px] w-full h-[6px] bg-brown" />
         </div>
 
         <img
+          src="hero/poster.svg"
+          className="absolute top-[175px] right-1/2 translate-x-[-150px] w-[175px]"
+        />
+
+        <img
+          src="hero/starry-night.svg"
+          className="absolute top-[325px] left-1/2 translate-x-[200px] w-[75px]"
+        />
+
+        <img
+          src="hero/sunflowers.svg"
+          className="absolute top-[340px] left-1/2 translate-x-[280px] h-[75px]"
+        />
+
+        <img
           src="hero/hanging-plant.svg"
-          className="absolute top-0 left-1/2 translate-x-[125px] w-[225px]"
+          className="absolute top-[36px] left-1/2 translate-x-[100px] w-[225px]"
         />
       </div>
 
