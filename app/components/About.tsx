@@ -2,10 +2,7 @@ import "../globals.css";
 
 export default function About() {
   return (
-    <div
-      id="about"
-      className="w-100 mx-[250px] mt-[50px] w-100 flex gap-8 justify-center"
-    >
+    <div id="about" className="mx-[250px] mt-[50px] flex gap-8 justify-center">
       <img
         src="/about/profile.jpg"
         className="w-[300px] h-[300px] rounded-full border-[4px] border-brown"
