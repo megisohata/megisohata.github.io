@@ -1,5 +1,4 @@
 "use client";
-import "../globals.css";
 import { useState, useEffect, useRef } from "react";
 import { FaVolumeMute, FaVolumeDown, FaVolumeUp } from "react-icons/fa";
 

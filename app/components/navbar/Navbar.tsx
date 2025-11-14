@@ -1,4 +1,4 @@
-import "../globals.css";
+import "../../globals.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -17,7 +17,7 @@ export default function Navbar() {
           <span className="hidden sm:inline-block spinElement">✰</span> About{" "}
           <span className="hidden sm:inline-block spinElement">✰</span>
         </a>
-        <a href="/experience" className="spinContainer">
+        <a href="#experience" className="spinContainer">
           <span className="hidden sm:inline-block spinElement">✿</span>{" "}
           Experience{" "}
           <span className="hidden sm:inline-block spinElement">✿</span>

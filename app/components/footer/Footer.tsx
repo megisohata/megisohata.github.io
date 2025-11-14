@@ -1,5 +1,3 @@
-import "../globals.css";
-
 export default function Footer() {
   return (
     <footer className="bg-brown text-cream w-full px-4 py-4 text-center">

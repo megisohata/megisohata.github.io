@@ -1,7 +1,7 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import MediaBar from "./components/MediaBar";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import MediaBar from "./components/media/MediaBar";
 
 export const metadata = {
   title: "Meg Isohata",

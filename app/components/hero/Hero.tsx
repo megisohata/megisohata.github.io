@@ -1,6 +1,3 @@
-import "../globals.css";
-import About from "./About";
-
 export default function Hero() {
   return (
     <div>
@@ -94,22 +91,6 @@ export default function Hero() {
           src="hero/hanging-plant.svg"
           className="absolute top-[36px] left-1/2 translate-x-[100px] w-[225px]"
         />
-      </div>
-
-      <div
-        className="h-[475px] w-full relative overflow-visible flex flex-col justify-center"
-        style={{
-          backgroundImage: "url('/hero/wood-grain.svg')",
-          backgroundRepeat: "repeat",
-          backgroundSize: "auto",
-        }}
-      >
-        <img
-          src="/hero/laptop.svg"
-          className="w-[400px] absolute left-1/2 -translate-x-1/2 top-0 -mt-[200px] z-20"
-        />
-
-        <About />
       </div>
     </div>
   );

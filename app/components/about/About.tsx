@@ -1,8 +1,9 @@
-import "../globals.css";
-
 export default function About() {
   return (
-    <div id="about" className="mx-[250px] mt-[50px] flex gap-8 justify-center">
+    <div
+      id="about"
+      className="mx-[250px] my-[50px] flex gap-8 justify-center relative"
+    >
       <img
         src="/about/profile.jpg"
         className="w-[300px] h-[300px] rounded-full border-[4px] border-brown"
