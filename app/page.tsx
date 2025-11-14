@@ -2,6 +2,7 @@ import "./globals.css";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/Projects";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <About />
       </div>
       <Experience />
+      <Projects />
     </div>
   );
 }

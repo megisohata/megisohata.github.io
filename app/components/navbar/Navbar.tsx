@@ -22,9 +22,8 @@ export default function Navbar() {
           Experience{" "}
           <span className="hidden sm:inline-block spinElement">✿</span>
         </a>
-        <a href="/portfolio" className="spinContainer">
-          <span className="hidden sm:inline-block spinElement">✧</span>{" "}
-          Portfolio{" "}
+        <a href="#projects" className="spinContainer">
+          <span className="hidden sm:inline-block spinElement">✧</span> Projects{" "}
           <span className="hidden sm:inline-block spinElement">✧</span>
         </a>
       </div>
