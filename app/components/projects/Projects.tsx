@@ -2,9 +2,10 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="py-[50px] flex gap-8 justify-center bg-brown text-cream scroll-mt-16"
+      className="bg-brown text-cream py-[50px] flex flex-col items-center"
     >
       <h1 className="text-4xl">Projects</h1>
+      <p>~ Coming Soon ~</p>
     </div>
   );
 }
