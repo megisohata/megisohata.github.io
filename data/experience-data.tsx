@@ -44,10 +44,10 @@ export const experiences: ExperienceEntry[] = [
   {
     type: PROFESSIONAL,
     title: "Python Course Consultant",
-    organization: "Bowers College of Computing and Information Science",
+    organization: "Cornell Bowers",
     date: "JUL 2024 - Present",
-    link: "https://www.cs.cornell.edu/courses/cs1110/2024fa/",
-    logo: "/experience/logos/capital-one.jpeg",
+    link: "https://www.cs.cornell.edu/courses/cs1110/",
+    logo: "/experience/logos/bowers.jpeg",
     location: "Ithaca, NY",
     tags: [],
     tasks: [
@@ -75,7 +75,7 @@ export const experiences: ExperienceEntry[] = [
     organization: "Cornell Rapid Prototyping Laboratory",
     date: "OCT 2023 - Present",
     link: "https://rpl.engineering.cornell.edu/",
-    logo: "/experience/logos/capital-one.jpeg",
+    logo: "/experience/logos/rpl.png",
     location: "Ithaca, NY",
     tags: [],
     tasks: [
@@ -87,10 +87,10 @@ export const experiences: ExperienceEntry[] = [
   {
     type: PROFESSIONAL,
     title: "ASCEND Intern",
-    organization: "Bowers College of Computing and Information Science",
+    organization: "LinkedIn | Cornell Bowers",
     date: "SEP 2023 - Present",
     link: "",
-    logo: "/experience/logos/capital-one.jpeg",
+    logo: "/experience/logos/linkedin.png",
     location: "Ithaca, NY",
     tags: [],
     tasks: [
@@ -104,7 +104,7 @@ export const experiences: ExperienceEntry[] = [
     organization: "Edmonds College",
     date: "SEP 2022 - AUG 2023",
     link: "https://www.edmonds.edu/programs-and-degrees/science-technology-engineering-math/study-room.html?utm_source=redir",
-    logo: "/experience/logos/capital-one.jpeg",
+    logo: "/experience/logos/edmonds-college.jpeg",
     location: "Lynnwood, WA",
     tags: [],
     tasks: [
@@ -117,10 +117,10 @@ export const experiences: ExperienceEntry[] = [
   {
     type: PROFESSIONAL,
     title: "President",
-    organization: "2522 Royal Robotics | FIRST Robotics Competition Team",
+    organization: "2522 Royal Robotics",
     date: "SEP 2021 - JUN 2023",
-    link: "https://www.thebluealliance.com/team/2522",
-    logo: "/experience/logos/capital-one.jpeg",
+    link: "https://sites.google.com/edmonds15.org/royalrobotics2522/home",
+    logo: "/experience/logos/2522.png",
     location: "Lynnwood, WA",
     tags: [],
     tasks: [
@@ -135,10 +135,10 @@ export const experiences: ExperienceEntry[] = [
   {
     type: PROFESSIONAL,
     title: "Team Captain",
-    organization: "3805 Atomic Robotics | FIRST Tech Challenge Team",
+    organization: "3805 Atomic Robotics",
     date: "SEP 2018 - JUN 2023",
     link: "https://atomic.ehrobotics.org/index.html",
-    logo: "/experience/logos/capital-one.jpeg",
+    logo: "/experience/logos/3805.jpg",
     location: "Edmonds, WA",
     tags: [],
     tasks: [
@@ -156,7 +156,7 @@ export const experiences: ExperienceEntry[] = [
     organization: "Edmonds School District",
     date: "NOV 2021 - JUN 2022",
     link: "https://explore.avid.org/what-avid-is/",
-    logo: "/experience/logos/capital-one.jpeg",
+    logo: "/experience/logos/edmonds-school-district.png",
     location: "Lynnwood, WA",
     tags: [],
     tasks: [
