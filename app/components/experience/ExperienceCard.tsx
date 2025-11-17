@@ -29,7 +29,7 @@ const ExperienceCard: React.FC<ExperienceEntry> = ({
       <div className="flex gap-2 text-left items-center">
         <img src={logo} className="h-[60px] rounded-md" />
         <div className="w-full">
-          <div className="flex gap-8 items-center justify-between w-full">
+          <div className="flex items-center justify-between w-full">
             <h1 className="text-xl">{title}</h1>
             <FaExpandArrowsAlt />
           </div>
