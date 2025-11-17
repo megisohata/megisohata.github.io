@@ -1,5 +1,8 @@
+"use client";
+
 import {
   FaExpandArrowsAlt,
+  FaCompressArrowsAlt,
   FaExternalLinkAlt,
   FaRegCalendar,
   FaMapMarkerAlt,
@@ -10,10 +13,14 @@ import {
   ExperienceEntry,
   PROFESSIONAL,
   EDUCATION,
-  NO_TAG,
 } from "@/data/experience-data";
 
-const ExperienceCard: React.FC<ExperienceEntry> = ({
+interface Props extends ExperienceEntry {
+  expanded: boolean;
+  onExpand: () => void;
+}
+
+const ExperienceCard: React.FC<Props> = ({
   type,
   title,
   organization,
@@ -23,35 +30,54 @@ const ExperienceCard: React.FC<ExperienceEntry> = ({
   location,
   tags,
   tasks,
+  expanded,
+  onExpand,
 }) => {
   return (
-    <div className="flex flex-col gap-1 border-green border-2 rounded-lg p-4 w-[450px]">
-      <div className="flex gap-2 text-left items-center">
-        <img src={logo} className="h-[60px] rounded-md" />
-        <div className="w-full">
-          <div className="flex items-center justify-between w-full">
-            <h1 className="text-xl">{title}</h1>
-            <FaExpandArrowsAlt />
-          </div>
+    <div
+      className={`
+        border-green border-2 rounded-lg bg-cream
+        transition-all duration-500 ease-out
+        overflow-hidden
+        ${expanded ? "p-6 w-[650px]" : "p-4 w-[450px]"}
+      `}
+    >
+      <div className="flex gap-2 text-left items-start">
+        <img src={logo} className="h-[60px] rounded-md flex-none" />
+
+        <div className="flex flex-col justify-center flex-grow">
+          <h1 className="text-xl">{title}</h1>
+
           {link ? (
-            <a href={link} target="_blank">
-              <div className="flex gap-2 items-center">
-                <p>{organization}</p>
-                <FaExternalLinkAlt />
-              </div>
+            <a href={link} target="_blank" className="flex gap-2 items-center">
+              <p>{organization}</p>
+              <FaExternalLinkAlt />
             </a>
           ) : (
             <p>{organization}</p>
           )}
         </div>
+
+        {expanded ? (
+          <FaCompressArrowsAlt
+            className="cursor-pointer hover:scale-110 transition flex-none"
+            onClick={onExpand}
+          />
+        ) : (
+          <FaExpandArrowsAlt
+            className="cursor-pointer hover:scale-110 transition flex-none"
+            onClick={onExpand}
+          />
+        )}
       </div>
 
-      <div className="flex gap-2">
-        <div className="flex gap-1 items-center">
+      <div className="flex gap-3 my-2">
+        <div className="flex gap-1 items-center text-sm">
           <FaRegCalendar />
           <p>{date}</p>
         </div>
-        <div className="flex gap-1 items-center">
+
+        <div className="flex gap-1 items-center text-sm">
           <FaMapMarkerAlt />
           <p>{location}</p>
         </div>
@@ -59,7 +85,7 @@ const ExperienceCard: React.FC<ExperienceEntry> = ({
 
       <hr className="border-green opacity-20" />
 
-      <div>
+      <div className="mt-2">
         {type === PROFESSIONAL ? (
           <div className="flex gap-1 items-center">
             <FaPlus />
@@ -71,6 +97,7 @@ const ExperienceCard: React.FC<ExperienceEntry> = ({
             <p>Courses</p>
           </div>
         ) : null}
+
         <div className="flex flex-wrap gap-1 items-center">
           {tags.map((tag, index) => (
             <p
@@ -82,6 +109,14 @@ const ExperienceCard: React.FC<ExperienceEntry> = ({
           ))}
         </div>
       </div>
+
+      {expanded && (
+        <div className="mt-4 space-y-2 transition-opacity duration-500">
+          {tasks?.map((task, index) => (
+            <p key={index}>• {task}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="mx-[250px] my-[50px] flex gap-8 justify-center relative"
+      className="mx-[250px] my-[50px] flex gap-8 justify-center relative scroll-mt-16"
     >
       <img
         src="/about/profile.jpg"

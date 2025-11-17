@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
 import { FaVolumeMute, FaVolumeDown, FaVolumeUp } from "react-icons/fa";
 
@@ -49,7 +50,7 @@ export default function MediaBar() {
   };
 
   return (
-    <div className="bg-brown text-cream h-8 w-fit px-4 py-1 rounded-full sticky bottom-2 ml-auto mr-2 mb-2 flex items-center gap-2">
+    <div className="bg-brown text-cream h-8 w-fit px-4 py-1 rounded-full sticky bottom-2 ml-auto mr-2 mb-2 flex items-center gap-2 z-30">
       <p onClick={togglePlay} className="cursor-pointer">
         [⏯]
       </p>
