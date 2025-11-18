@@ -68,19 +68,23 @@ export default function Experience() {
     const updatePosition = () => {
       const containerRect = containerEl.getBoundingClientRect();
       const timelineRect = timelineEl.getBoundingClientRect();
-      setArrowTop(
-        timelineRect.top - containerRect.top + timelineRect.height / 2
-      );
+      const topPosition =
+        timelineRect.top - containerRect.top + timelineRect.height / 2 + 40;
+
+      setArrowTop(topPosition);
       setArrowReady(true);
     };
 
     updatePosition();
     const observer = new ResizeObserver(updatePosition);
     observer.observe(timelineEl);
+    observer.observe(containerEl);
+    window.addEventListener("scroll", updatePosition);
     window.addEventListener("resize", updatePosition);
 
     return () => {
       observer.disconnect();
+      window.removeEventListener("scroll", updatePosition);
       window.removeEventListener("resize", updatePosition);
     };
   }, []);
@@ -92,23 +96,11 @@ export default function Experience() {
     >
       <h1 className="text-4xl text-center">Experience</h1>
 
-      {!atStart && (
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-[80px] bg-gradient-to-r from-cream to-transparent z-20" />
-      )}
-      {!atEnd && (
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-[80px] bg-gradient-to-l from-cream to-transparent z-20" />
-      )}
-      {showHint && (
-        <div className="absolute right-6 top-16 z-30 animate-pulse text-green text-sm bg-pistachio/70 px-3 py-1 rounded-full">
-          Scroll →
-        </div>
-      )}
-
       {arrowReady && !atStart && (
         <button
           onClick={scrollLeftFunc}
+          className="absolute left-3 p-3 rounded-full bg-green text-cream shadow-lg z-30 transform -translate-y-1/2"
           style={{ top: arrowTop }}
-          className="absolute left-3 translate-y-[18px] p-3 rounded-full bg-green text-cream shadow-lg z-30"
         >
           <FaChevronLeft />
         </button>
@@ -116,11 +108,23 @@ export default function Experience() {
       {arrowReady && !atEnd && (
         <button
           onClick={scrollRightFunc}
+          className="absolute right-3 p-3 rounded-full bg-green text-cream shadow-lg z-30 transform -translate-y-1/2"
           style={{ top: arrowTop }}
-          className="absolute right-3 translate-y-[18px] p-3 rounded-full bg-green text-cream shadow-lg z-30"
         >
           <FaChevronRight />
         </button>
+      )}
+
+      {!atStart && (
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-[80px] bg-gradient-to-r from-cream to-transparent z-20" />
+      )}
+      {!atEnd && (
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-[80px] bg-gradient-to-l from-cream to-transparent z-20" />
+      )}
+      {showHint && (
+        <div className="absolute right-6 top-[80px] z-30 animate-pulse text-green text-sm bg-pistachio/70 px-3 py-1 rounded-full">
+          Scroll →
+        </div>
       )}
 
       <div
