@@ -38,8 +38,8 @@ const ExperienceCard: React.FC<Props> = ({
       className={`
         border-green border-2 rounded-lg bg-cream
         transition-all duration-500 ease-out
-        overflow-hidden
-        ${expanded ? "p-6 w-[650px]" : "p-4 w-[450px]"}
+        overflow-hidden p-4
+        ${expanded ? "w-[650px]" : "w-[450px]"}
       `}
     >
       <div className="flex gap-2 text-left items-start">
