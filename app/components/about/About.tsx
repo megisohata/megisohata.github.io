@@ -2,11 +2,11 @@ export default function About() {
   return (
     <div
       id="about"
-      className="mx-[250px] my-[50px] flex gap-8 justify-center relative scroll-mt-16"
+      className="lg:px-[150px] md:px-[50px] px-[50px] py-[50px] flex flex-col md:flex-row gap-8 justify-center items-center relative scroll-mt-16"
     >
       <img
         src="/about/profile.jpg"
-        className="w-[300px] h-[300px] rounded-full border-[4px] border-brown"
+        className="w-[300px] h-[300px] md:w-[350px] md:h-[350px] sm:w-[400px] sm:h-[400px] rounded-full border-[4px] border-brown"
       />
       <div className="text-cream flex flex-col gap-4 justify-center flex-grow">
         <h1 className="text-4xl">Hi, I'm Meg 🌱</h1>

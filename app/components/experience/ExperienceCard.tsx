@@ -49,9 +49,13 @@ const ExperienceCard: React.FC<Props> = ({
           <h1 className="text-xl">{title}</h1>
 
           {link ? (
-            <a href={link} target="_blank" className="flex gap-2 items-center">
+            <a
+              href={link}
+              target="_blank"
+              className="flex gap-2 items-center expandContainer"
+            >
               <p>{organization}</p>
-              <FaExternalLinkAlt />
+              <FaExternalLinkAlt className="expandElement" />
             </a>
           ) : (
             <p>{organization}</p>
@@ -60,12 +64,12 @@ const ExperienceCard: React.FC<Props> = ({
 
         {expanded ? (
           <FaCompressArrowsAlt
-            className="cursor-pointer hover:scale-110 transition flex-none"
+            className="cursor-pointer expand flex-none"
             onClick={onExpand}
           />
         ) : (
           <FaExpandArrowsAlt
-            className="cursor-pointer hover:scale-110 transition flex-none"
+            className="cursor-pointer expand flex-none"
             onClick={onExpand}
           />
         )}

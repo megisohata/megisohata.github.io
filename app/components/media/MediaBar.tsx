@@ -51,13 +51,13 @@ export default function MediaBar() {
 
   return (
     <div className="bg-brown text-cream h-8 w-fit px-4 py-1 rounded-full sticky bottom-2 ml-auto mr-2 mb-2 flex items-center gap-2 z-30">
-      <p onClick={togglePlay} className="cursor-pointer">
+      <p onClick={togglePlay} className="cursor-pointer expand">
         [⏯]
       </p>
       <p className="text-sm">
         Amberlight {isPlaying ? "– playing..." : "– paused"}
       </p>
-      <div onClick={toggleVolume} className="cursor-pointer">
+      <div onClick={toggleVolume} className="cursor-pointer expand">
         {volume === 0.0 ? (
           <FaVolumeMute />
         ) : volume === 0.1 ? (

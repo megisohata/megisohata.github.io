@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className="bg-cream">
         <Navbar />
-        <main className="my-4">{children}</main>
+        <main className="">{children}</main>
         <MediaBar />
         <Footer />
       </body>

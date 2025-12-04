@@ -22,10 +22,10 @@ const ProjectCard: React.FC<ProjectEntry> = ({
           <a
             href={demo}
             target="_blank"
-            className="flex gap-2 items-center bg-pistachio text-green px-2 py-1 rounded-md"
+            className="flex gap-2 items-center bg-pistachio text-green px-2 py-1 rounded-md expandContainer"
           >
             <p>Demo</p>
-            <FaExternalLinkAlt />
+            <FaExternalLinkAlt className="expandElement" />
           </a>
         ) : null}
 

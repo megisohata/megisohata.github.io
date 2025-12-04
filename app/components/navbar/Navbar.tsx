@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="bg-brown text-cream h-12 w-full px-4 flex justify-between items-center fixed top-0 z-[100]">
       <div>
         <a href="/" className="flex items-center">
-          <span className="w-8 h-8 spin">
+          <span className="w-8 h-8 expand">
             <img src="icons/flower.png" />
           </span>
         </a>
@@ -18,13 +18,13 @@ export default function Navbar() {
           <span className="hidden sm:inline-block spinElement">✰</span>
         </a>
         <a href="#experience" className="spinContainer">
-          <span className="hidden sm:inline-block spinElement">✿</span>{" "}
+          <span className="hidden sm:inline-block spinElement">✰</span>{" "}
           Experience{" "}
-          <span className="hidden sm:inline-block spinElement">✿</span>
+          <span className="hidden sm:inline-block spinElement">✰</span>
         </a>
         <a href="#projects" className="spinContainer">
-          <span className="hidden sm:inline-block spinElement">✧</span> Projects{" "}
-          <span className="hidden sm:inline-block spinElement">✧</span>
+          <span className="hidden sm:inline-block spinElement">✰</span> Projects{" "}
+          <span className="hidden sm:inline-block spinElement">✰</span>
         </a>
       </div>
       <div className="flex gap-2">

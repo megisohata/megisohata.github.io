@@ -14,7 +14,6 @@ export default function Experience() {
 
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
-  const [showHint, setShowHint] = useState(true);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [arrowTop, setArrowTop] = useState(0);
   const [arrowReady, setArrowReady] = useState(false);
@@ -27,7 +26,6 @@ export default function Experience() {
       const { scrollLeft, scrollWidth, clientWidth } = scroller;
       setAtStart(scrollLeft <= 10);
       setAtEnd(scrollLeft + clientWidth >= scrollWidth - 10);
-      if (scrollLeft > 0) setShowHint(false);
     };
 
     scroller.addEventListener("scroll", handleScroll);
@@ -92,14 +90,14 @@ export default function Experience() {
   return (
     <div
       id="experience"
-      className="relative my-[50px] bg-cream text-brown no-scrollbar scroll-mt-16"
+      className="relative py-[50px] bg-cream text-brown no-scrollbar scroll-mt-16"
     >
       <h1 className="text-4xl text-center">Experience</h1>
 
       {arrowReady && !atStart && (
         <button
           onClick={scrollLeftFunc}
-          className="absolute left-3 p-3 rounded-full bg-green text-cream shadow-lg z-30 transform -translate-y-1/2"
+          className="absolute left-3 p-3 rounded-full bg-pistachio text-green z-30"
           style={{ top: arrowTop }}
         >
           <FaChevronLeft />
@@ -108,28 +106,16 @@ export default function Experience() {
       {arrowReady && !atEnd && (
         <button
           onClick={scrollRightFunc}
-          className="absolute right-3 p-3 rounded-full bg-green text-cream shadow-lg z-30 transform -translate-y-1/2"
+          className="absolute right-3 p-3 rounded-full bg-pistachio text-green z-30"
           style={{ top: arrowTop }}
         >
           <FaChevronRight />
         </button>
       )}
 
-      {!atStart && (
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-[80px] bg-gradient-to-r from-cream to-transparent z-20" />
-      )}
-      {!atEnd && (
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-[80px] bg-gradient-to-l from-cream to-transparent z-20" />
-      )}
-      {showHint && (
-        <div className="absolute right-6 top-[80px] z-30 animate-pulse text-green text-sm bg-pistachio/70 px-3 py-1 rounded-full">
-          Scroll →
-        </div>
-      )}
-
       <div
         ref={scrollRef}
-        className="overflow-x-auto scroll-smooth no-scrollbar pt-[50px]"
+        className="overflow-x-auto scroll-smooth no-scrollbar pt-[30px]"
       >
         <div className="flex">
           <div>

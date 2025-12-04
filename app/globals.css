@@ -37,22 +37,22 @@ h1 {
 
 .spin,
 .spinContainer > .spinElement {
-  transition: transform 1.5s ease-in-out;
+  transition: transform 0.75s ease-in-out;
 }
 
 .spin:hover,
 .spinContainer:hover > .spinElement {
-  transform: rotate(360deg);
+  transform: rotate(216deg);
 }
 
 .expand,
 .expandContainer > .expandElement {
-  transition: transform 1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 }
 
 .expand:hover,
 .expandContainer:hover > .expandElement {
-  transform: scale(1.15);
+  transform: scale(1.1); 
 }
 
 ul {
