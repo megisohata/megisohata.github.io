@@ -1,7 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import MediaBar from "./components/media/MediaBar";
 
 export const metadata = {
   title: "Meg Isohata",
@@ -26,7 +25,6 @@ export default function RootLayout({
       <body className="bg-cream">
         <Navbar />
         <main className="">{children}</main>
-        <MediaBar />
         <Footer />
       </body>
     </html>
