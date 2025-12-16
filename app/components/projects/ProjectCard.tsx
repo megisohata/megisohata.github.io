@@ -14,33 +14,39 @@ const ProjectCard: React.FC<ProjectEntry> = ({
 }) => {
   return (
     <div className="w-full h-full rounded-lg shrink-0 bg-cream text-brown p-4 flex flex-col gap-2">
-      <img src={cover} className="w-full h-[200px] object-cover rounded-md" />
-      <h1 className="text-xl">{title}</h1>
-
       <div className="flex gap-2">
-        {demo ? (
-          <a
-            href={demo}
-            target="_blank"
-            className="flex gap-2 items-center bg-pistachio text-green px-2 py-1 rounded-md expandContainer"
-          >
-            <p>Demo</p>
-            <FaExternalLinkAlt className="expandElement" />
-          </a>
-        ) : null}
+        <img
+          src={cover}
+          className="w-[400px] h-[200px] object-cover rounded-md"
+        />
+        <div className="flex flex-col gap-2">
+          <h1 className="text-xl">{title}</h1>
 
-        {github ? (
-          <a
-            href={github}
-            target="_blank"
-            className="flex justify-center items-center w-8 h-8 rounded-full bg-brown expandContainer"
-          >
-            <FaGithub className="text-cream h-6 w-6 expandElement" />
-          </a>
-        ) : null}
+          <div className="flex gap-2">
+            {demo ? (
+              <a
+                href={demo}
+                target="_blank"
+                className="flex gap-2 items-center bg-pistachio text-green px-2 py-1 rounded-md expandContainer"
+              >
+                <p>Demo</p>
+                <FaExternalLinkAlt className="expandElement" />
+              </a>
+            ) : null}
+
+            {github ? (
+              <a
+                href={github}
+                target="_blank"
+                className="flex justify-center items-center w-8 h-8 rounded-full bg-brown expandContainer"
+              >
+                <FaGithub className="text-cream h-6 w-6 expandElement" />
+              </a>
+            ) : null}
+          </div>
+          <p>{description}</p>
+        </div>
       </div>
-
-      <p>{description}</p>
 
       <hr className="border-green opacity-20" />
 

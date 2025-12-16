@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div>
+    <div className="relative w-full overflow-x-hidden">
       <div className="h-[500px] w-full bg-cream flex">
         <div className="relative bg-gradient-to-t from-cream via-skyBlue/100 to-skyBlue mx-auto mt-[75px] w-[250px] h-[325px] border-[6px] border-brown rounded-t-full overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.2)]">
           <svg

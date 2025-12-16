@@ -9,7 +9,7 @@ export default function Projects() {
     >
       <h1 className="text-4xl">Projects</h1>
 
-      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 pt-[30px]">
+      <div className="flex flex-col gap-8 pt-[30px]">
         {projects.map((proj, index) => (
           <div key={index}>
             <ProjectCard {...proj} />

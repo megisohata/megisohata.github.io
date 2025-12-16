@@ -7,55 +7,55 @@ import ExperienceCard from "./ExperienceCard";
 import Timeline from "./Timeline";
 import { experiences } from "@/data/experience-data";
 
+const CARD_SPACING = 885;
+const HALF_SPACING = 295;
+
 export default function Experience() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const timelineRef = useRef<HTMLDivElement>(null);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [arrowTop, setArrowTop] = useState(0);
   const [arrowReady, setArrowReady] = useState(false);
 
+  const centerCard = (index: number, smooth = true) => {
+    const container = scrollRef.current;
+    const card = cardRefs.current[index];
+    if (!container || !card) return;
+
+    const scrollLeft =
+      card.offsetLeft - container.clientWidth / 2 + card.clientWidth / 2;
+
+    container.scrollTo({
+      left: scrollLeft,
+      behavior: smooth ? "smooth" : "auto",
+    });
+  };
+
   useEffect(() => {
-    const scroller = scrollRef.current;
-    if (!scroller) return;
-
-    const handleScroll = () => {
-      const { scrollLeft, scrollWidth, clientWidth } = scroller;
-      setAtStart(scrollLeft <= 10);
-      setAtEnd(scrollLeft + clientWidth >= scrollWidth - 10);
-    };
-
-    scroller.addEventListener("scroll", handleScroll);
-    return () => scroller.removeEventListener("scroll", handleScroll);
+    requestAnimationFrame(() => centerCard(0, false));
   }, []);
 
-  const scrollByAmount = 500;
-  const scrollLeftFunc = () =>
-    scrollRef.current?.scrollBy({ left: -scrollByAmount, behavior: "smooth" });
-  const scrollRightFunc = () =>
-    scrollRef.current?.scrollBy({ left: scrollByAmount, behavior: "smooth" });
+  useEffect(() => {
+    setAtStart(currentIndex === 0);
+    setAtEnd(currentIndex === experiences.length - 1);
+  }, [currentIndex]);
 
-  const toggleExpand = (i: number) => {
-    const newIndex = expandedIndex === i ? null : i;
-    setExpandedIndex(newIndex);
+  const goLeft = () => {
+    if (currentIndex === 0) return;
+    const next = currentIndex - 1;
+    setCurrentIndex(next);
+    centerCard(next);
+  };
 
-    requestAnimationFrame(() => {
-      if (newIndex !== null && cardRefs.current[newIndex]) {
-        const cardEl = cardRefs.current[newIndex]!;
-        const containerEl = scrollRef.current!;
-
-        const scrollLeft =
-          cardEl.offsetLeft -
-          containerEl.offsetLeft -
-          containerEl.clientWidth / 2 +
-          cardEl.clientWidth / 2;
-
-        containerEl.scrollTo({ left: scrollLeft, behavior: "smooth" });
-      }
-    });
+  const goRight = () => {
+    if (currentIndex === experiences.length - 1) return;
+    const next = currentIndex + 1;
+    setCurrentIndex(next);
+    centerCard(next);
   };
 
   useEffect(() => {
@@ -66,23 +66,22 @@ export default function Experience() {
     const updatePosition = () => {
       const containerRect = containerEl.getBoundingClientRect();
       const timelineRect = timelineEl.getBoundingClientRect();
-      const topPosition =
+      const top =
         timelineRect.top - containerRect.top + timelineRect.height / 2 + 40;
 
-      setArrowTop(topPosition);
+      setArrowTop(top);
       setArrowReady(true);
     };
 
     updatePosition();
+
     const observer = new ResizeObserver(updatePosition);
     observer.observe(timelineEl);
     observer.observe(containerEl);
-    window.addEventListener("scroll", updatePosition);
-    window.addEventListener("resize", updatePosition);
 
+    window.addEventListener("resize", updatePosition);
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", updatePosition);
       window.removeEventListener("resize", updatePosition);
     };
   }, []);
@@ -92,20 +91,21 @@ export default function Experience() {
       id="experience"
       className="relative py-[50px] bg-cream text-brown no-scrollbar scroll-mt-16"
     >
-      <h1 className="text-4xl text-center">Experience</h1>
+      <h1 className="text-4xl text-center mb-6">Experience</h1>
 
       {arrowReady && !atStart && (
         <button
-          onClick={scrollLeftFunc}
+          onClick={goLeft}
           className="absolute left-3 p-3 rounded-full bg-pistachio text-green z-30"
           style={{ top: arrowTop }}
         >
           <FaChevronLeft />
         </button>
       )}
+
       {arrowReady && !atEnd && (
         <button
-          onClick={scrollRightFunc}
+          onClick={goRight}
           className="absolute right-3 p-3 rounded-full bg-pistachio text-green z-30"
           style={{ top: arrowTop }}
         >
@@ -119,54 +119,26 @@ export default function Experience() {
       >
         <div className="flex">
           <div>
-            <div className="flex overflow-x-none items-end">
-              <div className="w-[150px] shrink-0" />
-              {experiences.map((exp, index) => {
-                const isAbove = index % 2 === 0;
-                return isAbove ? (
-                  <div
-                    key={index}
-                    className="w-[590px] flex justify-center relative"
-                    ref={(el: HTMLDivElement | null) => {
-                      cardRefs.current[index] = el;
-                    }}
-                  >
-                    <ExperienceCard
-                      {...exp}
-                      expanded={expandedIndex === index}
-                      onExpand={() => toggleExpand(index)}
-                    />
-                    <div className="absolute left-1/2 top-full h-[64px] w-[2px] bg-green" />
-                  </div>
-                ) : null;
-              })}
+            <div className="flex items-end">
+              <div className="shrink-0" style={{ width: HALF_SPACING }} />
+
+              {experiences.map((exp, index) => (
+                <div
+                  key={index}
+                  ref={(el) => {
+                    cardRefs.current[index] = el;
+                  }}
+                  className="shrink-0 flex justify-center relative"
+                  style={{ width: CARD_SPACING }}
+                >
+                  <ExperienceCard {...exp} />
+                  <div className="absolute left-1/2 top-full h-[64px] w-[2px] bg-green" />
+                </div>
+              ))}
             </div>
 
             <div ref={timelineRef}>
               <Timeline />
-            </div>
-
-            <div className="flex overflow-x-none items-start">
-              <div className="w-[445px] shrink-0" />
-              {experiences.map((exp, index) => {
-                const isAbove = index % 2 === 0;
-                return !isAbove ? (
-                  <div
-                    key={index}
-                    className="w-[590px] flex justify-center relative"
-                    ref={(el: HTMLDivElement | null) => {
-                      cardRefs.current[index] = el;
-                    }}
-                  >
-                    <ExperienceCard
-                      {...exp}
-                      expanded={expandedIndex === index}
-                      onExpand={() => toggleExpand(index)}
-                    />
-                    <div className="absolute left-1/2 bottom-full h-[64px] w-[2px] bg-green" />
-                  </div>
-                ) : null;
-              })}
             </div>
           </div>
         </div>

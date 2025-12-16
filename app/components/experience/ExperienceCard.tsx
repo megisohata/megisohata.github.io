@@ -1,8 +1,6 @@
 "use client";
 
 import {
-  FaExpandArrowsAlt,
-  FaCompressArrowsAlt,
   FaExternalLinkAlt,
   FaRegCalendar,
   FaMapMarkerAlt,
@@ -15,12 +13,7 @@ import {
   EDUCATION,
 } from "@/data/experience-data";
 
-interface Props extends ExperienceEntry {
-  expanded: boolean;
-  onExpand: () => void;
-}
-
-const ExperienceCard: React.FC<Props> = ({
+const ExperienceCard: React.FC<ExperienceEntry> = ({
   type,
   title,
   organization,
@@ -30,16 +23,14 @@ const ExperienceCard: React.FC<Props> = ({
   location,
   tags,
   tasks,
-  expanded,
-  onExpand,
+  cardContent,
 }) => {
   return (
     <div
-      className={`
+      className={`lg:w-[850px] md:w-[750px] sm:w-[600px] xs:w-[500px] w-[350px]
         border-green border-2 rounded-lg bg-cream
         transition-all duration-500 ease-out
         overflow-hidden p-4
-        ${expanded ? "w-[650px]" : "w-[450px]"}
       `}
     >
       <div className="flex gap-2 text-left items-start">
@@ -61,31 +52,23 @@ const ExperienceCard: React.FC<Props> = ({
             <p>{organization}</p>
           )}
         </div>
-
-        {expanded ? (
-          <FaCompressArrowsAlt
-            className="cursor-pointer expand flex-none"
-            onClick={onExpand}
-          />
-        ) : (
-          <FaExpandArrowsAlt
-            className="cursor-pointer expand flex-none"
-            onClick={onExpand}
-          />
-        )}
       </div>
 
       <div className="flex gap-3 my-2">
-        <div className="flex gap-1 items-center text-sm">
+        <div className="flex gap-1 items-center">
           <FaRegCalendar />
           <p>{date}</p>
         </div>
 
-        <div className="flex gap-1 items-center text-sm">
+        <div className="flex gap-1 items-center">
           <FaMapMarkerAlt />
           <p>{location}</p>
         </div>
       </div>
+
+      <hr className="border-green opacity-20" />
+
+      {cardContent && <div className="my-2">{cardContent}</div>}
 
       <hr className="border-green opacity-20" />
 
@@ -106,21 +89,13 @@ const ExperienceCard: React.FC<Props> = ({
           {tags.map((tag, index) => (
             <p
               key={index}
-              className="bg-pistachio text-green text-xs w-fit px-2 py-1 rounded-md"
+              className="bg-pistachio text-green text-sm w-fit px-2 py-1 rounded-md"
             >
               {tag}
             </p>
           ))}
         </div>
       </div>
-
-      {expanded && (
-        <div className="mt-4 space-y-2 transition-opacity duration-500">
-          {tasks?.map((task, index) => (
-            <p key={index}>• {task}</p>
-          ))}
-        </div>
-      )}
     </div>
   );
 };

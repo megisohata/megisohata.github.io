@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export const PROFESSIONAL = 0;
 export const EDUCATION = 1;
 
@@ -11,6 +13,7 @@ export interface ExperienceEntry {
   location: string;
   tags: string[];
   tasks?: string[];
+  cardContent?: ReactNode;
 }
 
 export const experiences: ExperienceEntry[] = [
@@ -35,6 +38,34 @@ export const experiences: ExperienceEntry[] = [
       "Databases",
     ],
     tasks: [],
+    cardContent: (
+      <div>
+        <p>
+          At Cornell, I am a Jacobs Scholar, which is awarded to 20 incoming
+          freshman every year based on leadership potential in the engineering
+          field. My favorite parts of Cornell (other than the amazing people
+          I've met) are the sunsets, the slope, and the flowers in the spring.
+        </p>
+        <br />
+        <div className="flex">
+          <img
+            className="mx-auto border-2 rounded-md"
+            style={{ height: "240px", borderColor: "#dce2cf" }}
+            src="/experience/photos/cornell-sunset.JPG"
+          />
+          <img
+            className="mx-auto border-2 rounded-md"
+            style={{ height: "240px", borderColor: "#dce2cf" }}
+            src="/experience/photos/cornell-campus.jpg"
+          />
+          <img
+            className="mx-auto border-2 rounded-md"
+            style={{ height: "240px", borderColor: "#dce2cf" }}
+            src="/experience/photos/cornell-spring.jpg"
+          />
+        </div>
+      </div>
+    ),
   },
   {
     type: PROFESSIONAL,
@@ -57,6 +88,21 @@ export const experiences: ExperienceEntry[] = [
       "Agile Methodologies",
     ],
     tasks: [],
+    cardContent: (
+      <div>
+        <p>
+          At Capital One, I worked in Associate Experience Technology,
+          implementing an automated change management process to the board
+          metric reporting tool. Below is a photo of my team and I!
+        </p>
+        <br />
+        <img
+          className="mx-auto border-2 rounded-md"
+          style={{ height: "260px", borderColor: "#dce2cf" }}
+          src="/experience/photos/capital-one-team-photo.jpeg"
+        />
+      </div>
+    ),
   },
   {
     type: PROFESSIONAL,
@@ -80,6 +126,25 @@ export const experiences: ExperienceEntry[] = [
       "Optimize path planning for better accuracy using Bezier calculations between waypoints to determine flight path.",
       "Make frontend design and backend functionality adjustments to make the GCS more user friendly for effective use.",
     ],
+    cardContent: (
+      <div>
+        <p>
+          I am on the Autopilot subteam, which is responsible for ensuring that
+          our aircraft can perform necessary maneuvers to fulfill mission
+          requirements. Take a look at our Technical Design and Flight Readiness
+          Review video from 2024!
+        </p>
+        <br />
+        <iframe
+          className="mx-auto border-2 rounded-md"
+          style={{ borderColor: "#dce2cf" }}
+          src="https://www.youtube.com/embed/NM370N2wsnY"
+          allowFullScreen
+          width={450}
+          height={260}
+        />
+      </div>
+    ),
   },
   {
     type: PROFESSIONAL,
@@ -89,7 +154,7 @@ export const experiences: ExperienceEntry[] = [
     link: "https://www.cs.cornell.edu/courses/cs1110/",
     logo: "/experience/logos/bowers.jpeg",
     location: "Ithaca, NY",
-    tags: ["Python"],
+    tags: ["Python", "Technical Communication"],
     tasks: [
       "Facilitate office hours, weekly labs, and one-on-one meetings for CS 1110: Intro CS Design & Development to enhance student understanding of Python, programming concepts, software development, and program design.",
       "Contribute to staff planning meetings, grade assignments and exams, and provide meaningful feedback.",
@@ -119,6 +184,24 @@ export const experiences: ExperienceEntry[] = [
       "Establish and maintain positive relationships with companies such as Capital One, Hudson River Trading, and Sandia National Laboratories by networking with recruiters, bringing in approximately $20,000 in sponsorships.",
       "Organize corporate events such as coffee chats, information sessions, and workshops for 400+ active members.",
     ],
+    cardContent: (
+      <div>
+        <p>
+          I have been on WICC's executive board since freshman year, where I
+          have served as Corporate Relations Director and Vice President of
+          Corporate Relations. Connecting gender minorities in computing with
+          corporate opportunities has been one of the most rewarding parts of my
+          undergraduate career, and I am so grateful to be part of this amazing
+          community of women!
+        </p>
+        <br />
+        <img
+          className="mx-auto border-2 rounded-md"
+          style={{ height: "260px", borderColor: "#dce2cf" }}
+          src="/experience/photos/wicc.JPG"
+        />
+      </div>
+    ),
   },
   {
     type: PROFESSIONAL,
@@ -134,6 +217,26 @@ export const experiences: ExperienceEntry[] = [
       "Advise professors, research groups, and project teams on manufacturing with 3D printers and laser cutters.",
       "Streamline lab processes and resource allocation, fulfilling 1,000+ orders every semester.",
     ],
+    cardContent: (
+      <div>
+        <p>
+          At the RPL, I work with a team of lab technicians to process thousands
+          of orders a semester, as well as advising students, research groups,
+          and engineers on rapid prototyping techniques to suit their design
+          needs. Here's a timelapse of a 3D print of Cornell's clock tower - a
+          party favor we hand out to tour groups!
+        </p>
+        <br />
+        <iframe
+          className="mx-auto border-2 rounded-md"
+          style={{ borderColor: "#dce2cf" }}
+          src="https://www.youtube.com/embed/dhmggqPg-tA"
+          allowFullScreen
+          width={450}
+          height={260}
+        />
+      </div>
+    ),
   },
   {
     type: PROFESSIONAL,
@@ -147,58 +250,6 @@ export const experiences: ExperienceEntry[] = [
     tasks: [
       "Selected to participate in a highly selective two-year program to support students in academia and industry.",
       "Collaborating with peers to develop an entrepreneurial project, which will be pitched to LinkedIn, with guidance from industry mentors.",
-    ],
-  },
-  {
-    type: PROFESSIONAL,
-    title: "STEM Tutor",
-    organization: "Edmonds College",
-    date: "Sep 2022 - Aug 2023",
-    link: "https://www.edmonds.edu/programs-and-degrees/science-technology-engineering-math/study-room.html?utm_source=redir",
-    logo: "/experience/logos/edmonds-college.jpeg",
-    location: "Lynnwood, WA",
-    tags: [],
-    tasks: [
-      "Tutored pre-transfer and undergraduate students in advanced mathematics, physics, and chemistry.",
-      "Helped students improve study habits via organizational skills, note-taking methods, and time management.",
-      "Adapted tutoring techniques to accommodate students with various backgrounds and abilities.",
-      "Received positive feedback from students and faculty for effective communication and peer motivation.",
-    ],
-  },
-  {
-    type: PROFESSIONAL,
-    title: "President",
-    organization: "2522 Royal Robotics",
-    date: "Sep 2021 - Jun 2023",
-    link: "https://sites.google.com/edmonds15.org/royalrobotics2522/home",
-    logo: "/experience/logos/2522.png",
-    location: "Lynnwood, WA",
-    tags: [],
-    tasks: [
-      "Led 25 students in designing robots that accomplish game tasks to compete in regional and international competitions.",
-      "Designed mechanisms utilizing industrial tools such as Solidworks, CNC routers, and 3D printers.",
-      "Oversaw the prototyping, CAD design, manufacturing, assembly, and testing of the intake mechanism.",
-      "Supervised robot testing, communicating areas of improvement with mechanical and software subteams.",
-      "Collaborated with school district to make robotics accessible to deaf students by hiring ASL interpreters and learning basic ASL.",
-      "Worked closely with the treasurer to strategize allocation of a $100,000 annual budget.",
-    ],
-  },
-  {
-    type: PROFESSIONAL,
-    title: "Team Captain",
-    organization: "3805 Atomic Robotics",
-    date: "Sep 2018 - Jun 2023",
-    link: "https://atomic.ehrobotics.org/index.html",
-    logo: "/experience/logos/3805.jpg",
-    location: "Edmonds, WA",
-    tags: ["Java"],
-    tasks: [
-      "Led 18 students in designing competitive robots that accomplish game tasks, becoming regional champions and second overall in Washington State during the latest season.",
-      "Won 10 awards across three competition seasons for innovative mechanisms, industrial design elements, and overall team impact.",
-      "Utilized Java to write programs for human-controlled robot operation and to automate robot functions with input from color, proximity, and distance sensors.",
-      "Conducted research on distance sensors, collecting data on range, accuracy, and performance under different conditions.",
-      "Communicated robot capabilities, engineering design process, and technical specifications to judges at competition.",
-      "Organized and hosted outreach events, spreading STEM to about 10,000 people, raising over $5,000 for local charities, and collaborating with over 300 teams from 25 countries to raise awareness for environmental issues.",
     ],
   },
 ];

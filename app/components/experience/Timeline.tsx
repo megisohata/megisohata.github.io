@@ -1,4 +1,3 @@
-import ExperienceCard from "./ExperienceCard";
 import { experiences } from "@/data/experience-data";
 
 export default function Experience() {
@@ -6,34 +5,34 @@ export default function Experience() {
     <div id="experience" className="my-[50px] bg-cream text-brown">
       <div className="flex">
         <img
-          src="/experience/timeline-below.svg"
-          className="w-[300px] shrink-0"
+          src="/experience/timeline-above.svg"
+          className="w-[300px] shrink-0 z-10"
         />
         {experiences.map((_, index) => {
-          const isAbove = index % 2 === 1;
           return (
-            <img
-              key={index}
-              src={
-                isAbove
-                  ? "/experience/timeline-below.svg"
-                  : "/experience/timeline-above.svg"
-              }
-              className={"w-[300px] shrink-0 -ml-[5px] z-10"}
-            />
+            <div key={index} className="flex">
+              <img
+                key={`above-${index}`}
+                src="/experience/timeline-below.svg"
+                className="w-[300px] shrink-0 -ml-[5px] z-10"
+              />
+              <img
+                key={`below-${index}`}
+                src="/experience/timeline-above.svg"
+                className="w-[300px] shrink-0 -ml-[5px] z-10"
+              />
+              <img
+                key={`above2-${index}`}
+                src="/experience/timeline-below.svg"
+                className="w-[300px] shrink-0 -ml-[5px] z-10"
+              />
+            </div>
           );
         })}
-        {experiences.length % 2 == 0 ? (
-          <img
-            src="/experience/timeline-above.svg"
-            className="w-[300px] shrink-0 -ml-[5px]"
-          />
-        ) : (
-          <img
-            src="/experience/timeline-below.svg"
-            className="w-[300px] shrink-0 -ml-[5px]"
-          />
-        )}
+        <img
+          src="/experience/timeline-above.svg"
+          className="w-[300px] shrink-0 -ml-[5px] z-10"
+        />
       </div>
     </div>
   );
