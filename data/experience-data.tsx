@@ -159,6 +159,26 @@ export const experiences: ExperienceEntry[] = [
       "Facilitate office hours, weekly labs, and one-on-one meetings for CS 1110: Intro CS Design & Development to enhance student understanding of Python, programming concepts, software development, and program design.",
       "Contribute to staff planning meetings, grade assignments and exams, and provide meaningful feedback.",
     ],
+    cardContent: (
+      <div>
+        <p>
+          I have been on the course staff of CS 1110 for nearly two years, and
+          during that time have been promoted from Consultant to Teaching
+          Assistant - a role usually reserved for graduate students. Whether
+          through office hours, bi-weekly labs, one-on-one support sessions, or
+          review sessions, I have thoroughly enjoyed helping students improve
+          their understanding of the course material. Below is a photo from our
+          office hours queuing system, which shows that in 2025, I spent 2700
+          minutes (45 hours) helping students!
+        </p>
+        <br />
+        <img
+          className="mx-auto border-2 rounded-md"
+          style={{ height: "260px", borderColor: "#dce2cf" }}
+          src="/experience/photos/qmi-wrapped.png"
+        />
+      </div>
+    ),
   },
   {
     type: EDUCATION,
@@ -168,8 +188,41 @@ export const experiences: ExperienceEntry[] = [
     link: "https://www.yonsei.ac.kr/en_sc/index.do",
     logo: "/experience/logos/yonsei.png",
     location: "Seoul, KR",
-    tags: [],
+    tags: [
+      "Korean Language",
+      "Global Korean Music and Culture",
+      "Strategic Branding: Korea",
+    ],
     tasks: [],
+    cardContent: (
+      <div>
+        <p>
+          I spent the summer after my freshman year at Yonsei University in
+          Seoul, South Korea. There, I took courses in Korean language and
+          culture, explored Seoul and Busan, and ate to my heart's content. I
+          met so many students from all over the world and have many fond
+          memories.
+        </p>
+        <br />
+        <div className="flex">
+          <img
+            className="mx-auto border-2 rounded-md"
+            style={{ height: "240px", borderColor: "#dce2cf" }}
+            src="/experience/photos/yonsei.jpg"
+          />
+          <img
+            className="mx-auto border-2 rounded-md"
+            style={{ height: "240px", borderColor: "#dce2cf" }}
+            src="/experience/photos/onion.jpg"
+          />
+          <img
+            className="mx-auto border-2 rounded-md"
+            style={{ height: "240px", borderColor: "#dce2cf" }}
+            src="/experience/photos/temple.jpg"
+          />
+        </div>
+      </div>
+    ),
   },
   {
     type: PROFESSIONAL,
@@ -179,7 +232,7 @@ export const experiences: ExperienceEntry[] = [
     link: "https://wicc.cornell.edu/",
     logo: "/experience/logos/wicc.png",
     location: "Ithaca, NY",
-    tags: [],
+    tags: ["Communication", "Event Planning", "Organization"],
     tasks: [
       "Establish and maintain positive relationships with companies such as Capital One, Hudson River Trading, and Sandia National Laboratories by networking with recruiters, bringing in approximately $20,000 in sponsorships.",
       "Organize corporate events such as coffee chats, information sessions, and workshops for 400+ active members.",
@@ -211,7 +264,7 @@ export const experiences: ExperienceEntry[] = [
     link: "https://rpl.engineering.cornell.edu/",
     logo: "/experience/logos/rpl.png",
     location: "Ithaca, NY",
-    tags: [],
+    tags: ["3D Printing", "Laser Cutting", "Customer Service", "Optimization"],
     tasks: [
       "Operate and maintain over $500,000 of industrial manufacturing equipment and rapid prototyping tools.",
       "Advise professors, research groups, and project teams on manufacturing with 3D printers and laser cutters.",
@@ -246,10 +299,47 @@ export const experiences: ExperienceEntry[] = [
     link: "",
     logo: "/experience/logos/bowers.jpeg",
     location: "Ithaca, NY",
-    tags: [],
+    tags: [
+      "Entrepreneurship",
+      "Technical Communication",
+      "Market Research",
+      "Public Speaking",
+      "Ollama",
+    ],
     tasks: [
       "Selected to participate in a highly selective two-year program to support students in academia and industry.",
       "Collaborating with peers to develop an entrepreneurial project, which will be pitched to LinkedIn, with guidance from industry mentors.",
     ],
+    cardContent: (
+      <div>
+        <p>
+          ASCEND is a highly selective, two-year internship through Cornell
+          Bowers funded by LinkedIn that I was fortunate enough to take part in.
+          During the second year, I worked with five other students and three
+          mentors to develop an entrepreneurial venture, which we pitched to
+          LinkedIn at the end of the internship. Below are the slides and demo
+          we presented.
+        </p>
+        <br />
+        <div className="flex">
+          <iframe
+            className="mx-auto border-2 rounded-md"
+            style={{ borderColor: "#dce2cf" }}
+            src="/experience/pdfs/ascend.pdf"
+            allowFullScreen
+            width={400}
+            height={260}
+          />
+          <iframe
+            className="mx-auto border-2 rounded-md"
+            style={{ borderColor: "#dce2cf" }}
+            src="https://www.youtube.com/embed/M1EDbYZMVaE"
+            allowFullScreen
+            width={400}
+            height={260}
+          />
+        </div>
+      </div>
+    ),
   },
 ];

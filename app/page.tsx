@@ -25,6 +25,8 @@ export default function Home() {
       </div>
       <Experience />
       <Projects />
+
+      <div className="bg-cream h-[48px]"></div>
     </div>
   );
 }
