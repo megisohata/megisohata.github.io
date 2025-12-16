@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ProjectEntry {
   title: string;
   description: string;
@@ -6,26 +8,36 @@ export interface ProjectEntry {
   github?: string;
   skills: string[];
   authors: string[];
+  cardContent?: ReactNode;
 }
 
 export const projects: ProjectEntry[] = [
   {
-    title: "Portfolio Website",
+    title:
+      "Sentiment Analysis Research: Tesla-Related Tweets & Market Performance",
     description:
-      "My personal website was built with Next.js and Tailwind CSS and features home, about, experience, and portfolio pages. I designed and developed the website, incorporating custom icons, animations, and a responsive layout for all devices. While the majority of the current website was completed over a few days during winter break, it reflects months of design iterations, feedback from friends, and continuous optimization.",
-    cover: "portfolio/personal-web.jpg",
-    demo: "https://megisohata.github.io/",
-    github: "https://github.com/megisohata/megisohata.github.io",
-    skills: [
-      "Next.js",
-      "Tailwind CSS",
-      "HTML/CSS",
-      "TypeScript",
-      "GitHub",
-      "Responsive Design",
-      "UI/UX Design",
+      "Partnering with Millennium Management and other students, I conducted sentiment analysis research with Millennium Management, leveraging NLP to categorize Tesla-related tweets to extract patterns between social media discourse surrounding the company and stock market performance.",
+    cover: "",
+    skills: ["NLP", "Technical Communication", "Prediction"],
+    authors: [
+      "Meg Isohata",
+      "Arushi Aggarwal",
+      "Saanvi Jain",
+      "Emma Wang",
+      "Ishita Yadav",
     ],
-    authors: ["Meg Isohata"],
+    cardContent: (
+      <div>
+        <iframe
+          className="mx-auto border-2 rounded-md"
+          style={{ borderColor: "#dce2cf" }}
+          src="/experience/pdfs/mm_wicc.pdf"
+          allowFullScreen
+          width={500}
+          height={300}
+        />
+      </div>
+    ),
   },
   {
     title: "Ground Control Station",
@@ -43,6 +55,18 @@ export const projects: ProjectEntry[] = [
       "GitHub",
     ],
     authors: ["Meg Isohata", "Cynthia Shao", "Rachel Bethke"],
+    cardContent: (
+      <div>
+        <iframe
+          className="mx-auto border-2 rounded-md"
+          style={{ borderColor: "#dce2cf" }}
+          src="https://www.youtube.com/embed/pwyNBIwGpJg"
+          allowFullScreen
+          width={500}
+          height={300}
+        />
+      </div>
+    ),
   },
   {
     title: "LMCC Alumni Portal",
@@ -74,6 +98,15 @@ export const projects: ProjectEntry[] = [
       "Kevin Frazier",
       "Crystal Zhu",
     ],
+    cardContent: (
+      <div>
+        <img
+          className="mx-auto border-2 rounded-md"
+          style={{ height: "300px", borderColor: "#dce2cf" }}
+          src="/portfolio/lmcc.jpg"
+        />
+      </div>
+    ),
   },
   {
     title: "Interactive Image Selector",
@@ -92,6 +125,15 @@ export const projects: ProjectEntry[] = [
       "Documentation",
     ],
     authors: ["Meg Isohata"],
+    cardContent: (
+      <div>
+        <img
+          className="mx-auto border-2 rounded-md"
+          style={{ height: "300px", borderColor: "#dce2cf" }}
+          src="/portfolio/image-selector.jpg"
+        />
+      </div>
+    ),
   },
   {
     title: "Alien Invaders",
@@ -108,5 +150,14 @@ export const projects: ProjectEntry[] = [
       "Unit Testing",
     ],
     authors: ["Meg Isohata", "Kaitlyn Roach"],
+    cardContent: (
+      <div>
+        <img
+          className="mx-auto border-2 rounded-md"
+          style={{ height: "300px", borderColor: "#dce2cf" }}
+          src="/portfolio/invaders.jpg"
+        />
+      </div>
+    ),
   },
 ];
