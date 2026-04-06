@@ -67,15 +67,18 @@ export default function StarTrail() {
     resize();
     window.addEventListener("resize", resize);
 
-    const addStar = (x: number, y: number) => {
+    const addStar = (x: number, y: number, dirX: number, dirY: number) => {
+      const backwardSpeed = Math.random() * 1.5 + 0.5;
+      const spread = 1.2;
+
       starsRef.current.push({
-        x: x + (Math.random() - 0.5) * 12, // Wider spread for a thicker trail
-        y: y + (Math.random() - 0.5) * 12,
-        vx: (Math.random() - 0.5) * 0.5, // Faster spread
-        vy: (Math.random() - 0.5) * 0.5 - 0.2, // Faster upward float
+        x: x + (Math.random() - 0.5) * 8,
+        y: y + (Math.random() - 0.5) * 8,
+        vx: -dirX * backwardSpeed + (Math.random() - 0.5) * spread,
+        vy: -dirY * backwardSpeed + (Math.random() - 0.5) * spread,
         life: 1,
-        maxLife: Math.random() * 20 + 20, // Short lifespan prevents array bloating
-        radius: Math.random() * 3 + 1.5, // Slightly larger base size
+        maxLife: Math.random() * 20 + 20,
+        radius: Math.random() * 3 + 1.5,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
       });
     };
@@ -90,13 +93,15 @@ export default function StarTrail() {
       const dy = e.clientY - lastPosRef.current.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance > 3) {
-        const steps = Math.floor(distance / 3);
+      if (distance > 8) {
+        const dirX = dx / distance;
+        const dirY = dy / distance;
+
+        const steps = Math.floor(distance / 8);
         for (let i = 0; i < steps; i++) {
           const ix = lastPosRef.current.x + (dx * i) / steps;
           const iy = lastPosRef.current.y + (dy * i) / steps;
-          addStar(ix, iy);
-          addStar(ix, iy);
+          addStar(ix, iy, dirX, dirY);
         }
         lastPosRef.current = { x: e.clientX, y: e.clientY };
       }
@@ -114,6 +119,10 @@ export default function StarTrail() {
       for (const star of starsRef.current) {
         star.x += star.vx;
         star.y += star.vy;
+
+        star.vx *= 0.95;
+        star.vy *= 0.95;
+
         star.life -= 1 / star.maxLife;
 
         const currentRadius = Math.max(0, star.radius * star.life);
