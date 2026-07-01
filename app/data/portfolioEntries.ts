@@ -19,8 +19,6 @@ export type ProjectEntry = {
   };
 };
 
-export const experiences: ExperienceEntry[] = [
-];
+export const experiences: ExperienceEntry[] = [];
 
-export const projects: ProjectEntry[] = [
-];
+export const projects: ProjectEntry[] = [];
