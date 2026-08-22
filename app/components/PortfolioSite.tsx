@@ -231,7 +231,7 @@ export default function PortfolioSite() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I grew up in the Seattle suburbs and found an interect in tech
+                I grew up in the Seattle suburbs and found an interest in tech
                 through <span className="hl">FIRST robotics</span>. Now,
                 I&apos;m a senior at Cornell studying CS and AI, building things
                 that are{" "}
