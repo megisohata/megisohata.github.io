@@ -40,7 +40,6 @@ body {
   margin: 0;
   background: var(--bg-deep);
   color: var(--text-warm);
-  cursor: url("/cursor.png"), auto;
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
@@ -278,17 +277,6 @@ a {
   margin-bottom: 0;
 }
 
-.accent {
-  color: var(--star-rose);
-}
-
-.sub {
-  max-width: 480px;
-  margin: 0 0 36px;
-  color: var(--text-dim);
-  font-size: 17px;
-}
-
 .hero-cta {
   display: flex;
   gap: 14px;
@@ -487,16 +475,6 @@ section h2 {
   font-family: var(--font-display);
   font-size: 11px;
   line-height: 1.5;
-}
-
-.log-tag {
-  display: block;
-  margin-bottom: 3px;
-  color: var(--lavender);
-  font-size: 9.5px;
-  letter-spacing: 0;
-  transform: rotate(-1.5deg);
-  transform-origin: left;
 }
 
 .exp-body h3 {
@@ -862,16 +840,6 @@ footer {
 .links a:hover,
 .links a:focus-visible {
   color: var(--star-rose);
-}
-
-.star {
-  position: absolute;
-  background-color: #ffffff;
-  clip-path: polygon(50% 0%, 55% 45%, 100% 50%, 55% 55%, 50% 100%, 45% 55%, 0% 50%, 45% 45%);
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-name: starTwinkle;
-  animation-timing-function: ease-in-out;
 }
 
 @media (max-width: 720px) {

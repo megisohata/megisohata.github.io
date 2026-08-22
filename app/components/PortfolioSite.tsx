@@ -363,7 +363,7 @@ export default function PortfolioSite() {
 
         <footer>
           <div className="sig">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-          <p className="footer-note">this site has orbited since aug 2026</p>
+          <p className="footer-note">made with care, curiosity, and caffeine</p>
 
           <div className="links">
             <a href="mailto:megisohata@gmail.com" target="_blank">

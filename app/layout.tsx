@@ -20,8 +20,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Meg Isohata | Portfolio",
-  description:
-    "A starry Next.js portfolio built from the existing galaxy and star-trail interactions.",
+  description: "Meg's portfolio website.",
 };
 
 export default function RootLayout({
