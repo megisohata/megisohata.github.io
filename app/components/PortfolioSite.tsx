@@ -10,6 +10,7 @@ import {
 } from "react";
 import {
   experiences,
+  involvements,
   projects,
   type ProjectEntry,
 } from "../data/portfolioEntries";
@@ -182,6 +183,9 @@ export default function PortfolioSite() {
                 <a href="#experience">experience</a>
               </li>
               <li>
+                <a href="#involvements">involvements</a>
+              </li>
+              <li>
                 <a href="#projects">projects</a>
               </li>
             </ul>
@@ -197,12 +201,6 @@ export default function PortfolioSite() {
 
       <div className="wrap" id="top">
         <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-status">
-            <span className="status-dot" />
-            <div className="hero-eyebrow">
-              currently stargazing from seattle, wa
-            </div>
-          </div>
           <h1 id="hero-title" className="hero-name">
             Meg Isohata
           </h1>
@@ -211,8 +209,8 @@ export default function PortfolioSite() {
           </div>
           <div className="hero-text">
             <p>
-              I am a software engineer who enjoys building things that make
-              everyday life a little brighter.
+              I am a software engineer focused on user-facing full-stack work,
+              building products that make everyday just a bit better.
             </p>
           </div>
           <div className="hero-cta">
@@ -233,9 +231,10 @@ export default function PortfolioSite() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I grew up in the Seattle suburbs and caught the tech bug through{" "}
-                <span className="hl">FIRST robotics</span>. Now, I&apos;m a
-                senior at Cornell studying CS and AI, building things that are{" "}
+                I grew up in the Seattle suburbs and found an interect in tech
+                through <span className="hl">FIRST robotics</span>. Now,
+                I&apos;m a senior at Cornell studying CS and AI, building things
+                that are{" "}
                 <a
                   className="hl hl-link"
                   href="https://www.reddit.com/r/FRC/comments/12fxsli/2522_smoking_twice_in_playoffs_sad/"
@@ -249,18 +248,18 @@ export default function PortfolioSite() {
               <p>
                 My technical approach is driven by a commitment to thoughtful
                 design, clean code, and the{" "}
-                <span className="hl">small details</span> that make a huge
-                impact on user experience.
+                <span className="hl">small details</span> that make a{" "}
+                <span className="hl">huge impact</span> on user experience.
               </p>
               <p>
-                When I&apos;m not coding, you can find me reading a book,
-                reorganizing my Notion, or drinking a cup of coffee.
+                When I&apos;m not coding, you can find me crocheting,
+                reorganizing my Notion, or maxxing out my Beli.
               </p>
             </div>
             <aside className="now-card" aria-label="Right now">
               <div className="now-card-head">
                 <span className="now-dot" />
-                <span>a few bright things</span>
+                <span>A FEW OF MY FAVORITE THINGS</span>
               </div>
               <ul className="now-list">
                 <li>
@@ -268,7 +267,7 @@ export default function PortfolioSite() {
                   the cerulean sea by t.j. klune
                 </li>
                 <li>
-                  <span className="now-label">binge-watched tv shows</span>
+                  <span className="now-label">binge-watched</span>
                   grey&apos;s anatomy, gilmore girls, reign, outlander
                 </li>
                 <li>
@@ -286,16 +285,10 @@ export default function PortfolioSite() {
             <h2>experience</h2>
           </div>
           <div className="exp-list">
-            {experiences.map((experience, index) => (
+            {experiences.map((experience) => (
               <article className="exp-item" key={experience.org}>
                 <span className="exp-star">*</span>
-                <div className="exp-date">
-                  <span className="log-tag">
-                    Log No.{" "}
-                    {String(experiences.length - index).padStart(2, "0")}
-                  </span>
-                  {experience.date}
-                </div>
+                <div className="exp-date">{experience.date}</div>
                 <div className="exp-body">
                   <h3>{experience.org}</h3>
                   <div className="exp-role">{experience.role}</div>
@@ -306,9 +299,36 @@ export default function PortfolioSite() {
           </div>
         </section>
 
-        <section id="projects">
+        <section id="involvements">
           <div className="section-head">
             <div className="section-tag">section 03</div>
+            <h2>involvements</h2>
+          </div>
+          <div className="inv-list">
+            {involvements.map((involvement) => (
+              <article
+                className="inv-item"
+                key={`${involvement.org}-${involvement.role}`}
+              >
+                <div className="inv-item-top">
+                  <h3 className="inv-org">{involvement.org}</h3>
+                  <span className={`inv-type ${involvement.type}`}>
+                    {involvement.type === "club" ? "club" : "part-time"}
+                  </span>
+                </div>
+                <div className="inv-role">{involvement.role}</div>
+                {involvement.desc ? (
+                  <p className="inv-desc">{involvement.desc}</p>
+                ) : null}
+                <div className="inv-date">{involvement.date}</div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="projects">
+          <div className="section-head">
+            <div className="section-tag">section 04</div>
             <h2>projects</h2>
           </div>
           <div className="projects-grid">
@@ -343,9 +363,12 @@ export default function PortfolioSite() {
 
         <footer>
           <div className="sig">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-          <p className="footer-note">this site has orbited since jun 2026</p>
+          <p className="footer-note">this site has orbited since aug 2026</p>
 
           <div className="links">
+            <a href="mailto:megisohata@gmail.com" target="_blank">
+              email
+            </a>
             <a href="https://github.com/megisohata" target="_blank">
               github
             </a>
